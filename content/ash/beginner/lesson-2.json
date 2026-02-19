@@ -1,0 +1,20 @@
+{
+  "title": "Support and Resistance Levels",
+  "description": "Master the art of identifying and using support and resistance levels in your trading strategy. These are critical price levels where buying and selling pressure concentrates.",
+  "videoUrl": "/videos/ash/beginner/lesson-2.mp4",
+  "duration": "18 mins",
+  "content": "In this lesson, you'll understand:\n\n• What support and resistance are\n• How to draw support and resistance lines\n• The difference between hard and soft levels\n• How institutions use these levels\n• Practical examples on real charts",
+  "quiz": [
+    {
+      "question": "What is support in technical analysis?",
+      "options": [
+        "A price level where selling pressure emerges",
+        "A price level where buying pressure emerges and prevents further decline",
+        "The highest price reached by an asset",
+        "A moving average that supports the price"
+      ],
+      "answer": 1,
+      "explanation": "Support is a price level where buying pressure emerges, preventing the price from falling further. This is where buyers step in and support the price."
+    }
+  ]
+}

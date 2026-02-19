@@ -1,0 +1,20 @@
+{
+  "title": "Supply and Demand Zones",
+  "description": "Deep dive into supply and demand zones - the most advanced level of understanding price action. Learn how institutional traders use these zones.",
+  "videoUrl": "/videos/ash/intermediate/lesson-1.mp4",
+  "duration": "25 mins",
+  "content": "In this lesson, you'll learn:\n\n• The difference between static levels and dynamic zones\n• How to identify accumulation and distribution zones\n• How to use supply and demand in confluence with other tools\n• Real trading examples from major markets",
+  "quiz": [
+    {
+      "question": "What is a supply zone?",
+      "options": [
+        "Where buyers are concentrated",
+        "Where sellers are concentrated and selling pressure emerges",
+        "A moving average zone",
+        "The highest volatility area"
+      ],
+      "answer": 1,
+      "explanation": "A supply zone is an area where sellers are concentrated and selling pressure emerges. Prices typically struggle to break above these zones."
+    }
+  ]
+}

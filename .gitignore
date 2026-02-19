@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.next/
+.env
+.env.local
+.env.*.local
+/.idea
+.DS_Store
+dev.db
+dev.db-shm
+dev.db-wal
+*.log

@@ -1,0 +1,45 @@
+{
+  "version": "0.1.0",
+  "lastUpdated": "2026-02-18T00:00:00.000Z",
+  "instructors": [
+    {
+      "id": "instr-1",
+      "name": "A. Instructor",
+      "markets": [
+        {
+          "id": "mfx",
+          "title": "Forex",
+          "strategies": [
+            {
+              "id": "sma-breakout",
+              "title": "SMA Breakout",
+              "phases": [
+                {
+                  "id": "phase-1",
+                  "title": "Introduction",
+                  "lessons": [
+                    {
+                      "id": "lesson-1",
+                      "title": "SMA Basics",
+                      "description": "Simple moving average basics.",
+                      "videoUrl": "",
+                      "difficulty": "beginner",
+                      "marketType": "Forex",
+                      "tags": ["moving-average", "trend"],
+                      "estimatedTime": 10,
+                      "prerequisites": [],
+                      "version": "1.0",
+                      "lastUpdated": "2026-02-18T00:00:00.000Z",
+                      "mcqs": [],
+                      "charts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
