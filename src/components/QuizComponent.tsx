@@ -175,7 +175,7 @@ export function QuizComponent({ quiz, onComplete, batchMode = false }: QuizCompo
                           <button
                             key={oi}
                             onClick={() => handleBatchSelect(qi, oi)}
-                            className={`w-full text-left p-3 rounded-lg transition ${isSelected ? 'bg-blue-900 text-blue-50' : 'bg-gray-900 text-gray-100 hover:bg-gray-800' } ${showResult && isCorrect ? 'border-2 border-green-500 bg-green-900 text-green-50' : ''}`}
+                            className={`w-full text-left p-3 rounded-lg transition ${isSelected ? 'bg-blue-900 text-blue-50' : 'bg-gray-900 text-gray-50 hover:bg-gray-800' } ${showResult && isCorrect ? 'border-2 border-green-500 bg-green-900 text-green-50' : ''}`}
                           >
                             {opt}
                           </button>

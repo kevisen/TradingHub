@@ -89,26 +89,20 @@ export default function LessonPage() {
         <div className="w-full h-full flex items-center justify-center bg-gray-800 rounded-xl">
           <div className="text-center text-gray-300 w-full">
             {thumb ? (
-              <>
-                <a href={watchUrl} target="_blank" rel="noreferrer" className="block relative w-full" aria-label="Open video in new tab">
-                  <div className="w-full rounded-md overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                    <img src={thumb} alt="video thumbnail" className="w-full h-full object-cover block" />
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="bg-black/60 p-4 rounded-full">
-                      <svg className="w-12 h-12 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
-                  </div>
-                </a>
-                <div className="mt-4">
-                  <a className="button-primary inline-block" href={watchUrl} target="_blank" rel="noreferrer">Watch Video</a>
+              <div className="block relative w-full">
+                <div className="w-full rounded-md overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                  <img src={thumb} alt="video thumbnail" className="w-full h-full object-cover block" />
                 </div>
-              </>
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="bg-black/60 p-4 rounded-full">
+                    <svg className="w-12 h-12 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
+              </div>
             ) : (
-              <>
-                <p className="mb-4">Video cannot be embedded. You can watch it on YouTube.</p>
-                <a className="button-primary" href={watchUrl} target="_blank" rel="noreferrer">Watch on YouTube</a>
-              </>
+              <div>
+                <p className="mb-4">Video cannot be embedded. Displaying in modal...</p>
+              </div>
             )}
           </div>
         </div>

@@ -28,7 +28,7 @@ export function VideoPlayer({ lesson }: VideoPlayerProps) {
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-900 to-black">
-            <div className="text-center text-white">
+            <div className="text-center text-gray-50">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -48,7 +48,7 @@ export function VideoPlayer({ lesson }: VideoPlayerProps) {
 
         {/* Overlay info */}
         <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-sm px-4 py-2 rounded-lg">
-          <p className="text-white text-sm font-semibold">
+          <p className="text-gray-50 text-sm font-semibold">
             {lesson.duration || 'Video'}
           </p>
         </div>

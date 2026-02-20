@@ -32,7 +32,7 @@ const levelConfig = {
     icon: '🚀',
     color: 'from-gray-800 to-gray-700',
     textColor: 'text-gray-50',
-    badgeColor: 'bg-gray-700 text-gray-100',
+    badgeColor: 'bg-gray-700 text-gray-50',
   },
 };
 

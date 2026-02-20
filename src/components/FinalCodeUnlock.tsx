@@ -128,7 +128,7 @@ export function FinalCodeUnlock({
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-50 mb-2">
               Validation Code
             </label>
             <input

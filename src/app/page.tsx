@@ -65,7 +65,7 @@ export default function Home() {
             <h2 className="text-5xl font-bold text-gray-50 mb-6">
               Master Trading The Structured Way
             </h2>
-            <p className="text-xl text-gray-300 mb-4">
+            <p className="text-xl text-gray-400 mb-4">
               Learn from industry experts. Progress through Beginner, Intermediate, and Advanced levels. Unlock your bootcamp completion certificate.
             </p>
             <p className="text-gray-400 mb-8">
