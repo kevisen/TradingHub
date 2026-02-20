@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ChevronLeft } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Level } from '@/lib/types';
+import lessonsData, { getLessonsForInstructor } from '@/data/lessons';
 
 const fakeContent = {
   ash: {
@@ -59,8 +60,8 @@ export default function LevelPage() {
   const [lessons, setLessons] = useState<any[]>([]);
 
   useEffect(() => {
-    // Load lessons
-    const content = fakeContent[instructorId as keyof typeof fakeContent];
+    // Load lessons from lessons.ts
+    const content = getLessonsForInstructor(instructorId);
     if (content && content[levelId]) {
       setLessons(content[levelId]);
     }

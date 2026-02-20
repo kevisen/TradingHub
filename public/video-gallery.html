@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Responsive YouTube Video Gallery</title>
+    <style>
+      :root{--gap:12px}
+      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.4;margin:20px;background:#f7f7fb;color:#111}
+      h1{font-size:1.25rem;margin:0 0 16px}
+      .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--gap)}
+      .video{position:relative;width:100%}
+      /* maintain 16:9 via aspect-ratio with a padding-top fallback */
+      .video::before{content:"";display:block;padding-top:56.25%}
+      .video > *{position:absolute;top:0;left:0;width:100%;height:100%}
+
+      .thumb{display:block;width:100%;height:100%;border:0;padding:0;background:#000;color:inherit;cursor:pointer;overflow:hidden;}
+      .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+      .play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+      .play-button{width:64px;height:64px;background:rgba(0,0,0,0.6);border-radius:50%;display:flex;align-items:center;justify-content:center}
+      .play-button svg{width:28px;height:28px;fill:#fff;margin-left:4px}
+
+      @media (max-width:420px){:root{--gap:8px} .play-button{width:52px;height:52px}}
+
+      /* small caption */
+      .caption{font-size:0.9rem;margin-top:6px;color:#333}
+    </style>
+  </head>
+  <body>
+    <h1>Responsive YouTube Video Gallery</h1>
+
+    <div id="gallery" class="gallery" aria-live="polite"></div>
+
+    <script>
+      // Array of YouTube video IDs
+      const VIDEO_IDS = [
+        'dQw4w9WgXcQ',
+        'M7lc1UVf-VE',
+        'kXYiU_JCYtU',
+        '3JZ_D3ELwOQ'
+      ]
+
+      const gallery = document.getElementById('gallery')
+
+      function makeThumbnail(id, index){
+        const wrapper = document.createElement('div')
+        wrapper.className = 'video'
+
+        const button = document.createElement('button')
+        button.className = 'thumb'
+        button.type = 'button'
+        button.setAttribute('aria-label', 'Play video')
+        button.dataset.videoId = id
+
+        const img = document.createElement('img')
+        img.src = `https://img.youtube.com/vi/${encodeURIComponent(id)}/hqdefault.jpg`
+        img.alt = 'Video thumbnail'
+
+        const overlay = document.createElement('div')
+        overlay.className = 'play-overlay'
+        overlay.innerHTML = `
+          <div class="play-button" aria-hidden>
+            <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.52 7.14a4.86 4.86 0 00-6.82-1.74C53.56 12.2 42.6 19.9 34 23.1 25.4 19.9 14.44 12.2 8.3 5.4A4.86 4.86 0 001.48 7.14 47.16 47.16 0 000 24a47.16 47.16 0 001.48 16.86 4.86 4.86 0 006.82 1.74c6.14-6.8 17.1-14.5 25.7-17.7 8.6 3.2 19.56 10.9 25.7 17.7a4.86 4.86 0 006.82-1.74A47.16 47.16 0 0068 24a47.16 47.16 0 00-1.48-16.86z"></path></svg>
+          </div>`
+
+        button.appendChild(img)
+        button.appendChild(overlay)
+
+        // Click handler: replace thumbnail with iframe (no iframe preloaded)
+        button.addEventListener('click', () => {
+          const iframe = document.createElement('iframe')
+          // Use privacy-enhanced mode and set origin on client to avoid embed errors
+          const params = new URLSearchParams({
+            autoplay: '1',
+            mute: '1', // muted to increase autoplay success across browsers
+            playsinline: '1',
+            modestbranding: '1',
+            rel: '0',
+            origin: window.location.origin
+          })
+          iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?${params}`
+          iframe.title = 'YouTube video player'
+          iframe.setAttribute('frameborder', '0')
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+          iframe.allowFullscreen = true
+          iframe.loading = 'lazy'
+
+          // Ensure iframe fills the 16:9 container
+          iframe.style.width = '100%'
+          iframe.style.height = '100%'
+
+          // Replace the button with the iframe
+          wrapper.replaceChild(iframe, button)
+        }, { once: true })
+
+        wrapper.appendChild(button)
+
+        const caption = document.createElement('div')
+        caption.className = 'caption'
+        caption.textContent = `Video ${index + 1}`
+
+        const container = document.createElement('div')
+        container.appendChild(wrapper)
+        container.appendChild(caption)
+
+        return container
+      }
+
+      // Populate gallery without creating any iframes
+      VIDEO_IDS.forEach((id, i) => gallery.appendChild(makeThumbnail(id, i)))
+    </script>
+  </body>
+</html>

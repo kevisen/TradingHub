@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { getLessonsForInstructor } from '@/data/lessons';
 import { ChevronLeft } from 'lucide-react';
 import { useParams } from 'next/navigation';
 
@@ -54,6 +55,15 @@ export default function InstructorPage() {
   const params = useParams();
   const instructorId = params.id as string;
   const instructor = instructorData[instructorId as keyof typeof instructorData];
+  const lessonCounts = (() => {
+    const data = getLessonsForInstructor(instructorId);
+    if (!data) return { beginner: 0, intermediate: 0, advanced: 0 };
+    return {
+      beginner: data.beginner ? data.beginner.length : 0,
+      intermediate: data.intermediate ? data.intermediate.length : 0,
+      advanced: data.advanced ? data.advanced.length : 0,
+    };
+  })();
 
   if (!instructor) {
     return (
@@ -114,7 +124,7 @@ export default function InstructorPage() {
                       {level}
                     </h3>
                     <p className="text-gray-400 mb-4">{levelConfig[level].description}</p>
-                    <p className="text-sm text-gray-500">2 lessons</p>
+                    <p className="text-sm text-gray-500">{lessonCounts[level]} lessons</p>
                   </div>
                 </Link>
               </motion.div>
