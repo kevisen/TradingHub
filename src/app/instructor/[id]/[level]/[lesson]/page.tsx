@@ -198,11 +198,11 @@ export default function LessonPage() {
 
   if (loading || !lesson) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-950">
+      <div className="min-h-screen flex items-center justify-center bg-black">
         <motion.div
           animate={{ opacity: [0.5, 1] }}
           transition={{ duration: 1, repeat: Infinity }}
-          className="text-gray-400 text-lg"
+          className="text-purple-400 text-lg"
         >
           Loading lesson...
         </motion.div>
@@ -212,8 +212,8 @@ export default function LessonPage() {
 
   if (showFinalCode && bootcampDone) {
     return (
-      <div className="min-h-screen bg-gray-950 py-16">
-        <div className="container-max">
+      <div className="min-h-screen bg-black py-16">
+        <div className="max-w-[1400px] mx-auto px-6">
           <FinalCodeUnlock
             instructor={instructorId}
             onSuccess={() => window.location.href = '/'}
@@ -224,7 +224,7 @@ export default function LessonPage() {
   }
 
   return (
-    <div className="flex h-screen bg-gray-900 overflow-hidden">
+    <div className="flex h-screen bg-black">
       {/* Sidebar */}
       <LessonSidebar
         lessons={allLessons}
@@ -235,15 +235,39 @@ export default function LessonPage() {
       />
 
       {/* Main Content */}
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden">
+        <style>{`
+          ::-webkit-scrollbar {
+            width: 8px;
+          }
+          
+          ::-webkit-scrollbar-track {
+            background: transparent;
+          }
+          
+          ::-webkit-scrollbar-thumb {
+            background: #a855f7;
+            border-radius: 4px;
+          }
+          
+          ::-webkit-scrollbar-thumb:hover {
+            background: #9333ea;
+          }
+          
+          /* Firefox scrollbar */
+          * {
+            scrollbar-color: #a855f7 transparent;
+            scrollbar-width: thin;
+          }
+        `}</style>
         <div className="p-8">
-          <div className="container-max max-w-5xl">
+          <div className="max-w-5xl mx-auto">
             {/* Back Button */}
             <motion.button
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               onClick={() => router.push(`/instructor/${instructorId}/${levelId}`)}
-              className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-6"
+              className="flex items-center gap-2 text-purple-300 hover:text-purple-200 transition-colors mb-6"
             >
               <ArrowLeft size={20} />
               <span>Back to Level</span>
@@ -278,9 +302,9 @@ export default function LessonPage() {
 
             {/* Lesson info below video (kept styling similar to VideoPlayer) */}
             <div className="mt-8">
-              <h1 className="text-4xl font-bold text-gray-50 mb-4">{lesson.title}</h1>
+              <h1 className="text-4xl font-bold text-white mb-4">{lesson.title}</h1>
               {lesson.note && (
-                <p className="text-sm text-gray-400 mb-4">Source: <a className="text-blue-400 underline" href={lesson.note} target="_blank" rel="noreferrer">watch on YouTube</a></p>
+                <p className="text-sm text-gray-400 mb-4">Source: <a className="text-purple-400 hover:text-purple-300 underline" href={lesson.note} target="_blank" rel="noreferrer">watch on YouTube</a></p>
               )}
             </div>
 
@@ -304,7 +328,7 @@ export default function LessonPage() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       onClick={() => setShowQuiz(true)}
-                      className="button-primary text-lg px-8 py-4 w-full"
+                      className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white font-semibold text-lg px-8 py-4 w-full rounded-lg transition-all duration-300"
                     >
                       Take Quiz to Continue
                     </motion.button>
