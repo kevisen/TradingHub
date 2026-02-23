@@ -1,0 +1,35 @@
+{
+  "id": "ash-advanced-9",
+  "lesson_id": "ash-advanced-9",
+  "title": "Macro Each Hour Review Using Bias",
+  "video_url": "https://youtu.be/c1BtxfPW_mg",
+  "videoUrl": "https://youtu.be/c1BtxfPW_mg",
+  "description": "Hourly macro review and bias adjustment techniques",
+  "quiz": [
+    {
+      "question": "Hourly macro review helps adjust:",
+      "options": ["Intraday narrative", "Indicator settings", "Spread", "Broker leverage"],
+      "correctIndex": 0
+    },
+    {
+      "question": "If price delivers expected liquidity early, bias should:",
+      "options": ["Remain unchanged", "Be reassessed", "Be ignored", "Increase lot size"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Hourly structure shifts signal:",
+      "options": ["Possible narrative change", "Market close", "Volume drop", "Spread freeze"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Advanced traders adapt bias based on:",
+      "options": ["Real-time delivery", "Emotion", "Random entries", "Indicator stacking"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Macro review reduces:",
+      "options": ["Blind execution", "Precision", "Discipline", "Context"],
+      "correctIndex": 0
+    }
+  ]
+}

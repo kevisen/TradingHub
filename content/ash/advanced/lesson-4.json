@@ -1,0 +1,35 @@
+{
+  "id": "ash-advanced-4",
+  "lesson_id": "ash-advanced-4",
+  "title": "How to Read Chart 2026 Part 1",
+  "video_url": "https://youtu.be/jqj1Rtz3jPQ",
+  "videoUrl": "https://youtu.be/jqj1Rtz3jPQ",
+  "description": "Foundational chart reading techniques for 2026",
+  "quiz": [
+    {
+      "question": "Reading charts begins with identifying:",
+      "options": ["Trend structure", "Indicators", "Volume only", "Spread"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Swing highs and lows define:",
+      "options": ["Market structure", "RSI", "Spread", "News"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Consolidation often precedes:",
+      "options": ["Expansion", "Market close", "Spread freeze", "Flat session"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Clean displacement signals:",
+      "options": ["Strong participation", "Weak market", "Random move", "Indicator lag"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Multi-timeframe reading improves:",
+      "options": ["Context", "Emotion", "Spread", "Random entries"],
+      "correctIndex": 0
+    }
+  ]
+}

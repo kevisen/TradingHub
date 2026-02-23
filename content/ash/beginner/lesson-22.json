@@ -1,64 +1,35 @@
 {
-  "title": "Decoding Market Structure Part 2 Bonus",
-  "description": "Understanding equal highs, inducement, liquidity sweeps, and high-probability setups.",
-  "videoUrl": "https://youtu.be/ZIy6vxdg1ZA",
-  "duration": "27 mins",
-  "content": "In this lesson, you'll learn:\n\n• Equal highs as liquidity repositories\n• Inducement trap mechanics\n• Valid structural shift requirements\n• Liquidity sweeps and expansion\n• Confluence with structure and liquidity\n• Reducing uncertainty through alignment",
+  "id": "ash-beginner-22",
+  "lesson_id": "ash-beginner-22",
+  "title": "DAY 12 Validation CRT AND INVALIDATION CRT",
+  "video_url": "https://youtu.be/mLXW82-Oaxk",
+  "videoUrl": "https://youtu.be/mLXW82-Oaxk",
+  "description": "Confirmation and invalidation mechanisms in trading systems",
   "quiz": [
     {
-      "question": "Equal highs typically hold:",
-      "options": [
-        "Resistance only",
-        "Stop liquidity",
-        "Indicator signals",
-        "Discount zone"
-      ],
-      "answer": 1,
-      "explanation": "Equal highs are where stop losses and orders cluster, holding liquidity for institutions to grab."
+      "question": "CRT validation requires:",
+      "options": ["Liquidity alignment", "Indicator crossover", "Random breakout", "Volume drop"],
+      "correctIndex": 0
     },
     {
-      "question": "Inducement is used to:",
-      "options": [
-        "Confirm breakout",
-        "Trap early traders",
-        "Reduce volatility",
-        "Flatten market"
-      ],
-      "answer": 1,
-      "explanation": "Inducement is when price moves falsely to trap traders before the real move begins."
+      "question": "Invalidation occurs when:",
+      "options": ["Opposite structure breaks", "Spread narrows", "Candle small", "Market flat"],
+      "correctIndex": 0
     },
     {
-      "question": "Valid structural shift requires:",
-      "options": [
-        "Wick break",
-        "Strong body close",
-        "Volume drop",
-        "Small candles"
-      ],
-      "answer": 1,
-      "explanation": "A valid shift requires a strong closing candle beyond the level, not just a wick touch."
+      "question": "Confirmation candle must:",
+      "options": ["Close decisively", "Wick only", "Be doji", "Be equal high"],
+      "correctIndex": 0
     },
     {
-      "question": "Liquidity sweep often leads to:",
-      "options": [
-        "Expansion",
-        "Flat range",
-        "Market close",
-        "Spread freeze"
-      ],
-      "answer": 0,
-      "explanation": "After grabbing liquidity, price typically expands in the intended direction."
+      "question": "Bias formation depends on:",
+      "options": ["Structure + Liquidity", "Indicator only", "News only", "Volume only"],
+      "correctIndex": 0
     },
     {
-      "question": "Structure + liquidity confluence reduces:",
-      "options": [
-        "Discipline",
-        "Uncertainty",
-        "Volatility",
-        "Range"
-      ],
-      "answer": 1,
-      "explanation": "When structure aligns with liquidity, uncertainty decreases and probability increases."
+      "question": "Ignoring invalidation leads to:",
+      "options": ["Better RR", "Larger losses", "Higher accuracy", "Discipline"],
+      "correctIndex": 1
     }
   ]
 }

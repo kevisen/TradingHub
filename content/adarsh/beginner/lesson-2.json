@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-2",
+  "lesson_id": "adarsh-beginner-2",
+  "title": "Forex Foundation Part 2",
+  "video_url": "https://youtu.be/z1E7P9vdSyI?si=MkW09Blx9AE4JVJk",
+  "videoUrl": "https://youtu.be/z1E7P9vdSyI?si=MkW09Blx9AE4JVJk",
+  "description": "Continuation of Forex Foundation basics",
+  "quiz": [
+    {
+      "question": "What continues from Foundation Part 1?",
+      "options": ["Advanced coding", "Forex basics", "Cooking tips", "Math puzzles"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which term is key in Forex Part 2?",
+      "options": ["Pip", "CAGR", "EPS", "EBITDA"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A pip is used to measure:",
+      "options": ["Stocks", "Price movement in Forex", "Real Estate", "Options"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Forex Part 2 teaches about:",
+      "options": ["Sports", "Traders' mindset", "Market mechanics", "Geometry"],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which is likely explained in this video?",
+      "options": ["Currency pairs", "Baking recipes", "Foreign languages", "Poetry"],
+      "correctIndex": 0
+    }
+  ]
+}

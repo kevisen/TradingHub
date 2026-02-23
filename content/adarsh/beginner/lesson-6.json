@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-6",
+  "lesson_id": "adarsh-beginner-6",
+  "title": "EP6: TRADING VIEW",
+  "video_url": "https://youtu.be/BcQOSppk8_Q?si=Uf6-Re613_rlYy1u",
+  "videoUrl": "https://youtu.be/BcQOSppk8_Q?si=Uf6-Re613_rlYy1u",
+  "description": "Introduction to TradingView platform",
+  "quiz": [
+    {
+      "question": "TradingView is used to:",
+      "options": ["Draw charts", "Play games", "Edit videos", "Cook food"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A primary feature of TradingView is:",
+      "options": ["Charting", "Listening to music", "Text editing", "Painting"],
+      "correctIndex": 0
+    },
+    {
+      "question": "You can analyze markets using:",
+      "options": ["TradingView", "Calculator", "TV", "Camera"],
+      "correctIndex": 0
+    },
+    {
+      "question": "TradingView helps traders with:",
+      "options": ["Indicators", "Sports", "Cooking", "Math tests"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A trader view shows:",
+      "options": ["Price charts", "Weather", "News films", "Songs"],
+      "correctIndex": 0
+    }
+  ]
+}

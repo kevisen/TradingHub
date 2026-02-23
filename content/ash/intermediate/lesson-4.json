@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-4",
+  "lesson_id": "ash-intermediate-4",
+  "title": "Midnight Opening Range + Open Range Gap + Fib + Risk 2025",
+  "video_url": "https://youtu.be/97d7JgT5wYs",
+  "videoUrl": "https://youtu.be/97d7JgT5wYs",
+  "description": "Advanced opening range and Fibonacci techniques",
+  "quiz": [
+    {
+      "question": "Opening range defines:",
+      "options": ["Intraday structure reference", "Weekly trend", "Indicator cross", "News impact"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Fibonacci is used to measure:",
+      "options": ["Liquidity only", "Retracement depth", "Spread", "Volume"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A valid breakout requires:",
+      "options": ["Strong body close", "Wick only", "Small candles", "Equal highs"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Risk must be adjusted when volatility:",
+      "options": ["Increases", "Decreases", "Flat", "Closed"],
+      "correctIndex": 0
+    },
+    {
+      "question": "CME opening logic focuses on:",
+      "options": ["Institutional participation", "Retail indicators", "Crypto bots", "Random entries"],
+      "correctIndex": 0
+    }
+  ]
+}

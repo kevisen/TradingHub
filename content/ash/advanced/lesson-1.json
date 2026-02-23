@@ -1,20 +1,35 @@
 {
-  "title": "Algorithmic Trading and Market Makers",
-  "description": "Understanding how algorithms and market makers move price. Learn the psychology of money and how institutions build positions.",
-  "videoUrl": "/videos/ash/advanced/lesson-1.mp4",
-  "duration": "30 mins",
-  "content": "In this course, you will explore:\n\n• How HFT (High Frequency Trading) impacts markets\n• Understanding order flow and smart money\n• Building positions like an institution\n• The psychology behind price movements\n• Advanced confluence strategies",
+  "id": "ash-advanced-1",
+  "lesson_id": "ash-advanced-1",
+  "title": "When Does the CRT Fail? How to Choose Correctly?",
+  "video_url": "https://www.youtube.com/watch?v=x8hd0J-kz3I",
+  "videoUrl": "https://www.youtube.com/watch?v=x8hd0J-kz3I",
+  "description": "Understanding CRT failures and correct selection methods",
   "quiz": [
     {
-      "question": "What is order flow in trading?",
-      "options": [
-        "The speed at which orders are placed",
-        "The sequence and volume of buy and sell orders",
-        "The flow of information to traders",
-        "The price movement direction"
-      ],
-      "answer": 1,
-      "explanation": "Order flow refers to the sequence and volume of buy and sell orders in the market. Understanding order flow helps traders anticipate price movements."
+      "question": "CRT most commonly fails when:",
+      "options": ["Liquidity is not taken first", "RSI diverges", "Volume is high", "Candle large"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A low-probability CRT setup often lacks:",
+      "options": ["Displacement", "Color", "Volume", "Spread"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Choosing the correct CRT requires alignment with:",
+      "options": ["Higher timeframe narrative", "Indicator cross", "Random breakout", "News only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Entering before confirmation increases:",
+      "options": ["Precision", "Risk exposure", "Probability", "Reward"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A failed CRT usually results in:",
+      "options": ["Immediate continuation opposite direction", "Consolidation only", "Market close", "Spread freeze"],
+      "correctIndex": 0
     }
   ]
 }

@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-15",
+  "lesson_id": "ash-intermediate-15",
+  "title": "WHY THIS 5 MIN CANDLE? WHY THIS FVG? (Enigma)",
+  "video_url": "https://youtu.be/i8PZT9hjiMc",
+  "videoUrl": "https://youtu.be/i8PZT9hjiMc",
+  "description": "Understanding the context behind 5-minute candles and FVGs",
+  "quiz": [
+    {
+      "question": "A significant 5-minute candle usually represents:",
+      "options": ["Retail activity", "Institutional displacement", "Low liquidity", "Spread widening"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A valid FVG forms when:",
+      "options": ["Three-candle imbalance appears", "Equal highs form", "RSI crosses", "Volume drops"],
+      "correctIndex": 0
+    },
+    {
+      "question": "The reason a specific candle matters is because it:",
+      "options": ["Creates inefficiency", "Looks big", "Has high volume only", "Happens at random"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Not all FVGs should be traded because:",
+      "options": ["Some lack context", "All are equal", "Volume low", "Indicators lag"],
+      "correctIndex": 0
+    },
+    {
+      "question": "The best 5-minute FVG aligns with:",
+      "options": ["Higher timeframe bias", "Random breakout", "Spread", "News only"],
+      "correctIndex": 0
+    }
+  ]
+}

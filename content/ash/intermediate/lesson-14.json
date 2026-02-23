@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-14",
+  "lesson_id": "ash-intermediate-14",
+  "title": "ICT 2025 Model Completed Bias V-Shape Target News Part 2",
+  "video_url": "https://youtu.be/Uqh6l84CWwE",
+  "videoUrl": "https://youtu.be/Uqh6l84CWwE",
+  "description": "Post-news volatility and liquidity vacuum management",
+  "quiz": [
+    {
+      "question": "Post-news volatility requires:",
+      "options": ["Adjusted risk", "Higher leverage", "No stop", "Faster entries"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Liquidity vacuum forms after:",
+      "options": ["Aggressive displacement", "Small candles", "Flat range", "Spread freeze"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Model completion confirms:",
+      "options": ["Structural alignment", "Random breakout", "News reaction only", "Indicator cross"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Trading during news without plan increases:",
+      "options": ["Probability", "Risk", "Accuracy", "Discipline"],
+      "correctIndex": 1
+    },
+    {
+      "question": "V-shape target often aligns with:",
+      "options": ["Opposite liquidity pool", "Indicator", "Spread", "Volume"],
+      "correctIndex": 0
+    }
+  ]
+}

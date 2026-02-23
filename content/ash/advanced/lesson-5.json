@@ -1,0 +1,35 @@
+{
+  "id": "ash-advanced-5",
+  "lesson_id": "ash-advanced-5",
+  "title": "How to Read Chart 2026 Part 2",
+  "video_url": "https://youtu.be/ZqX4Zn1nP74",
+  "videoUrl": "https://youtu.be/ZqX4Zn1nP74",
+  "description": "Advanced chart reading patterns and structure analysis",
+  "quiz": [
+    {
+      "question": "Internal structure helps refine:",
+      "options": ["Entry precision", "Emotion", "Spread", "News"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A valid BOS requires:",
+      "options": ["Strong close beyond level", "Wick only", "Small candle", "Volume drop"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Liquidity above highs attracts:",
+      "options": ["Price", "Spread", "Indicators", "Volume"],
+      "correctIndex": 0
+    },
+    {
+      "question": "False breakout lacks:",
+      "options": ["Continuation", "Structure", "Emotion", "Spread"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Reading charts without bias leads to:",
+      "options": ["Indecision", "Precision", "Discipline", "Accuracy"],
+      "correctIndex": 0
+    }
+  ]
+}

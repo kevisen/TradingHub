@@ -1,64 +1,35 @@
 {
-  "title": "Ash Training Day 5 Part 1",
-  "description": "Understanding trading bias, higher timeframe bias, and how to use bias for trading decisions.",
-  "videoUrl": "https://youtu.be/9fD4CFKTHTE",
-  "duration": "20 mins",
-  "content": "In this lesson, you'll learn:\n\n• What bias means in trading context\n• How to form directional bias\n• Using daily bias for lower timeframe entries\n• HTF bias overriding LTF noise\n• The dangers of trading without bias\n• How to align bias with structure and liquidity",
+  "id": "ash-beginner-12",
+  "lesson_id": "ash-beginner-12",
+  "title": "Ash Training Day 5 Part 3",
+  "video_url": "https://youtu.be/Uzi0b5tipLc",
+  "videoUrl": "https://youtu.be/Uzi0b5tipLc",
+  "description": "Session timing and trading windows",
   "quiz": [
     {
-      "question": "Bias in trading means:",
-      "options": [
-        "Emotional opinion",
-        "Directional expectation",
-        "Random guess",
-        "Indicator color"
-      ],
-      "answer": 1,
-      "explanation": "Bias is your directional expectation based on structural analysis, not emotions or guesses."
+      "question": "Session timing affects:",
+      "options": ["Liquidity", "Candle color", "Internet", "Hardware"],
+      "correctIndex": 0
     },
     {
-      "question": "Daily bias helps:",
-      "options": [
-        "Lower timeframe entries",
-        "Laptop performance",
-        "Spread reduction",
-        "Internet speed"
-      ],
-      "answer": 0,
-      "explanation": "Daily bias provides context and direction for making better entries on lower timeframes."
+      "question": "London session is known for:",
+      "options": ["Increased volatility", "No movement", "Weekend gap", "Low liquidity"],
+      "correctIndex": 0
     },
     {
-      "question": "HTF bias overrides:",
-      "options": [
-        "Minor LTF noise",
-        "Broker spread",
-        "Indicators",
-        "Chart theme"
-      ],
-      "answer": 0,
-      "explanation": "Higher timeframe bias should override lower timeframe noise to prevent trading against major trends."
+      "question": "NY session overlap creates:",
+      "options": ["Higher liquidity", "Flat market", "No trades", "Spread freeze"],
+      "correctIndex": 0
     },
     {
-      "question": "A wrong bias leads to:",
-      "options": [
-        "Clear entries",
-        "Forced trades",
-        "Perfect RR",
-        "Guaranteed wins"
-      ],
-      "answer": 1,
-      "explanation": "Incorrect bias causes traders to force entries and trade against the prevailing trend."
+      "question": "Session bias must align with:",
+      "options": ["Higher timeframe bias", "Emotions", "Random entries", "Indicators only"],
+      "correctIndex": 0
     },
     {
-      "question": "Bias should be based on:",
-      "options": [
-        "Structure and liquidity",
-        "Feelings",
-        "News only",
-        "Random choice"
-      ],
-      "answer": 0,
-      "explanation": "Bias must be grounded in objective market structure and liquidity analysis, not subjective factors."
+      "question": "Time-based models depend on:",
+      "options": ["Kill zones", "Laptop brand", "Mouse DPI", "Chart color"],
+      "correctIndex": 0
     }
   ]
 }

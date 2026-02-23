@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-10",
+  "lesson_id": "adarsh-beginner-10",
+  "title": "EP8: Candlestick",
+  "video_url": "https://youtu.be/H_FpKZu9Lmg?si=e-iZ5_U0EJi9mRDw",
+  "videoUrl": "https://youtu.be/H_FpKZu9Lmg?si=e-iZ5_U0EJi9mRDw",
+  "description": "Understanding candlestick patterns and price action",
+  "quiz": [
+    {
+      "question": "Candlesticks show:",
+      "options": ["Price action", "Weather", "Sports", "Music"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A bullish candle means:",
+      "options": ["Price up", "Price down", "Flat", "None"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Wicks show:",
+      "options": ["Highs/lows", "Volume", "Time", "Colors"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Candlestick patterns help:",
+      "options": ["Predict moves", "Cook food", "Drive cars", "Watch movies"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A candle's body shows:",
+      "options": ["Open-close range", "Weather", "Songs", "Maps"],
+      "correctIndex": 0
+    }
+  ]
+}

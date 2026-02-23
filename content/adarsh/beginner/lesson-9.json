@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-9",
+  "lesson_id": "adarsh-beginner-9",
+  "title": "EP7: MT5 PART 3",
+  "video_url": "https://youtu.be/WSJxtIlRJpU?si=GoASZaK6NP1O4OxM",
+  "videoUrl": "https://youtu.be/WSJxtIlRJpU?si=GoASZaK6NP1O4OxM",
+  "description": "Advanced MT5 tools and expert strategies",
+  "quiz": [
+    {
+      "question": "MT5 Part 3 likely focuses on:",
+      "options": ["More advanced tools", "Art", "Dancing", "Geography"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In MT5 you can:",
+      "options": ["Analyze charts", "Track only clocks", "Draw random art", "Eat food"],
+      "correctIndex": 0
+    },
+    {
+      "question": "MT5 helps traders:",
+      "options": ["Evaluate signals", "Read novels", "Sleep", "Paint"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Stop losses are used to:",
+      "options": ["Limit risk", "Drive cars", "Sing", "Draw"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Part 3 advances the user's:",
+      "options": ["Skills", "Watch list", "School grade", "Height"],
+      "correctIndex": 0
+    }
+  ]
+}

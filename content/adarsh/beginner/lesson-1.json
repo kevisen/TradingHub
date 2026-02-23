@@ -1,20 +1,35 @@
 {
-  "title": "Reading the Orderbook",
-  "description": "Master the skill of reading the orderbook and understanding what each level means for price predictions.",
-  "videoUrl": "/videos/adarsh/beginner/lesson-1.mp4",
-  "duration": "20 mins",
-  "content": "Learn to:\n\n• Understand the orderbook structure\n• Identify market makers and takers\n• Spot accumulation patterns\n• Read volume clusters\n• Make predictions based on order flow",
+  "id": "adarsh-beginner-1",
+  "lesson_id": "adarsh-beginner-1",
+  "title": "Forex Foundation Part 1",
+  "video_url": "https://youtu.be/HU4XdX6OpxY?si=nHBtRugdKnWHJPKe",
+  "videoUrl": "https://youtu.be/HU4XdX6OpxY?si=nHBtRugdKnWHJPKe",
+  "description": "Introduction to Forex Foundation basics",
   "quiz": [
     {
-      "question": "What is the bid-ask spread?",
-      "options": [
-        "The difference between the highest bid and lowest ask",
-        "The total volume of orders",
-        "The time between orders",
-        "The price momentum"
-      ],
-      "answer": 0,
-      "explanation": "The bid-ask spread is the difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller will accept (ask)."
+      "question": "What is the primary goal of Forex Foundation?",
+      "options": ["Predict stock prices", "Understand currency markets", "Learn programming", "Trade commodities"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which market does Forex Foundation focus on?",
+      "options": ["Cryptocurrency", "Forex", "Real Estate", "Stocks"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Forex refers to trading in what?",
+      "options": ["Bonds", "Currencies", "Stocks", "Indices"],
+      "correctIndex": 1
+    },
+    {
+      "question": "The Forex Foundation helps traders understand:",
+      "options": ["Weather patterns", "Currency pairs", "Movie ratings", "Football scores"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A key concept in Forex is:",
+      "options": ["P/E Ratio", "Currency exchange", "Dividend payout", "Book value"],
+      "correctIndex": 1
     }
   ]
 }

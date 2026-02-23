@@ -1,64 +1,35 @@
 {
-  "title": "Day 6 Part 2",
-  "description": "Confirmation entries, premium/discount zones, and equilibrium concepts in trading.",
-  "videoUrl": "https://youtu.be/Wd0WWHGZm8s",
-  "duration": "20 mins",
-  "content": "In this lesson, you'll learn:\n\n• What confirmation entry strategy means\n• Retracement entries into premium zones\n• Premium zone definition and placement\n• Discount zone locations\n• Equilibrium and its significance\n• Risk management with confirmation entries",
+  "id": "ash-beginner-16",
+  "lesson_id": "ash-beginner-16",
+  "title": "Decoding Market Structure Part 2 Bonus",
+  "video_url": "https://youtu.be/ZIy6vxdg1ZA",
+  "videoUrl": "https://youtu.be/ZIy6vxdg1ZA",
+  "description": "Advanced structural concepts and liquidity raids",
   "quiz": [
     {
-      "question": "Confirmation entry improves:",
-      "options": [
-        "Accuracy",
-        "Random trades",
-        "Overleveraging",
-        "Noise"
-      ],
-      "answer": 0,
-      "explanation": "Waiting for confirmation before entering reduces false signals and improves win rate."
+      "question": "Inducement often appears before:",
+      "options": ["Major move", "Weekend", "Flat market", "Indicator lag"],
+      "correctIndex": 0
     },
     {
-      "question": "A retracement entry aims to:",
-      "options": [
-        "Enter at premium/discount",
-        "Enter at random",
-        "Trade without bias",
-        "Avoid structure"
-      ],
-      "answer": 0,
-      "explanation": "Retracement entries place you at better price levels (premium or discount zones) with better risk-reward."
+      "question": "Liquidity raid confirms:",
+      "options": ["Stop hunt", "Broker shutdown", "Spread freeze", "News halt"],
+      "correctIndex": 0
     },
     {
-      "question": "Premium zone is typically:",
-      "options": [
-        "Above equilibrium",
-        "Below equilibrium",
-        "Random level",
-        "News candle"
-      ],
-      "answer": 0,
-      "explanation": "Premium zones are above equilibrium, representing expensive price levels."
+      "question": "Structural shift requires:",
+      "options": ["Candle close confirmation", "Wick only", "Volume drop", "Gap open"],
+      "correctIndex": 0
     },
     {
-      "question": "Discount zone is:",
-      "options": [
-        "Above range",
-        "Below equilibrium",
-        "Spread zone",
-        "Weekend gap"
-      ],
-      "answer": 1,
-      "explanation": "Discount zones are below equilibrium, representing cheaper price levels for better entries."
+      "question": "Higher timeframe liquidity is:",
+      "options": ["Stronger target", "Irrelevant", "Random", "Weak zone"],
+      "correctIndex": 0
     },
     {
-      "question": "Equilibrium represents:",
-      "options": [
-        "50% of range",
-        "Stop loss",
-        "Resistance only",
-        "Indicator signal"
-      ],
-      "answer": 0,
-      "explanation": "Equilibrium is typically the 50% level of a price range."
+      "question": "Structure alignment improves:",
+      "options": ["Probability", "Emotions", "Randomness", "Risk exposure"],
+      "correctIndex": 0
     }
   ]
 }

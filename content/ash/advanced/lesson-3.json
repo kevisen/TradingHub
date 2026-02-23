@@ -1,0 +1,35 @@
+{
+  "id": "ash-advanced-3",
+  "lesson_id": "ash-advanced-3",
+  "title": "2026 09:30 with ORG + Trade Setup",
+  "video_url": "https://youtu.be/7rZbTMgoM5M",
+  "videoUrl": "https://youtu.be/7rZbTMgoM5M",
+  "description": "Advanced opening range gap strategies for 2026",
+  "quiz": [
+    {
+      "question": "09:30 EST represents:",
+      "options": ["NY cash open", "London close", "Asia open", "Market close"],
+      "correctIndex": 0
+    },
+    {
+      "question": "ORG works best when combined with:",
+      "options": ["CRT bias", "RSI", "Moving averages", "News only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Expansion after ORG typically follows:",
+      "options": ["Liquidity sweep", "Flat session", "Equal highs only", "Volume drop"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Stop placement should be based on:",
+      "options": ["Structure invalidation", "Random pips", "Spread", "Emotion"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Advanced ORG execution requires:",
+      "options": ["Patience at open", "Immediate entry", "Overleveraging", "News chasing"],
+      "correctIndex": 0
+    }
+  ]
+}

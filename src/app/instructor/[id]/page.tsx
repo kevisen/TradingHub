@@ -2,9 +2,9 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { getLessonsForInstructor } from '@/data/lessons';
 import { ChevronLeft } from 'lucide-react';
 import { useParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const instructorData = {
   ash: {
@@ -55,15 +55,33 @@ export default function InstructorPage() {
   const params = useParams();
   const instructorId = params.id as string;
   const instructor = instructorData[instructorId as keyof typeof instructorData];
-  const lessonCounts = (() => {
-    const data = getLessonsForInstructor(instructorId);
-    if (!data) return { beginner: 0, intermediate: 0, advanced: 0 };
-    return {
-      beginner: data.beginner ? data.beginner.length : 0,
-      intermediate: data.intermediate ? data.intermediate.length : 0,
-      advanced: data.advanced ? data.advanced.length : 0,
+  const [lessonCounts, setLessonCounts] = useState({ beginner: 0, intermediate: 0, advanced: 0 });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (!instructorId) return;
+
+    const fetchLessons = async () => {
+      try {
+        const response = await fetch(`/api/lessons?instructor=${instructorId}`);
+        if (response.ok) {
+          const data = await response.json();
+          setLessonCounts({
+            beginner: data.beginner?.length || 0,
+            intermediate: data.intermediate?.length || 0,
+            advanced: data.advanced?.length || 0,
+          });
+        }
+      } catch (error) {
+        console.error('Failed to fetch lessons:', error);
+        setLessonCounts({ beginner: 0, intermediate: 0, advanced: 0 });
+      } finally {
+        setLoading(false);
+      }
     };
-  })();
+
+    fetchLessons();
+  }, [instructorId]);
 
   if (!instructor) {
     return (

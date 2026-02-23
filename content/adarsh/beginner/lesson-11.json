@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-11",
+  "lesson_id": "adarsh-beginner-11",
+  "title": "EP9 - Market Structure",
+  "video_url": "https://youtu.be/G9z7elC9fas?si=B1VGNP7FFEe2WBIG",
+  "videoUrl": "https://youtu.be/G9z7elC9fas?si=B1VGNP7FFEe2WBIG",
+  "description": "Understanding market structure and trend analysis",
+  "quiz": [
+    {
+      "question": "Market structure shows:",
+      "options": ["Trend direction", "Weather", "History", "Music"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Higher highs indicate:",
+      "options": ["Uptrend", "Downtrend", "Flat", "None"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Lower lows indicate:",
+      "options": ["Downtrend", "Uptrend", "Flat", "Sports"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Support is:",
+      "options": ["Price floor", "Ceiling", "Weather", "Music"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Resistance is:",
+      "options": ["Price ceiling", "Floor", "Rain", "News"],
+      "correctIndex": 0
+    }
+  ]
+}

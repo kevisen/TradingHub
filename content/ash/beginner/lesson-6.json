@@ -1,64 +1,35 @@
 {
-  "title": "Ash Training Day 1.1",
-  "description": "Introduction to market structure - Understanding highs, lows, trends, and break of structure concepts.",
-  "videoUrl": "https://youtu.be/HZ3ktZh8xMI",
-  "duration": "25 mins",
-  "content": "In this lesson, you'll learn:\n\n• Market structure basics: highs and lows\n• How to identify uptrends and downtrends\n• Higher highs and higher lows in uptrends\n• Break of structure signals\n• Liquidity placement and importance\n• The power of patience in trading",
+  "id": "ash-beginner-6",
+  "lesson_id": "ash-beginner-6",
+  "title": "Ash - Day 2 Part 1",
+  "video_url": "https://youtu.be/tRQTV_8tt7w",
+  "videoUrl": "https://youtu.be/tRQTV_8tt7w",
+  "description": "Risk management and position sizing basics",
   "quiz": [
     {
-      "question": "What is market structure based on?",
-      "options": [
-        "Random candles",
-        "Highs and lows",
-        "Volume only",
-        "News only"
-      ],
-      "answer": 1,
-      "explanation": "Market structure is defined by the sequence of highs and lows, which forms the framework for technical analysis."
+      "question": "What is risk per trade usually measured in?",
+      "options": ["Pips or percentage", "Candles", "Colors", "Minutes"],
+      "correctIndex": 0
     },
     {
-      "question": "An uptrend forms when price makes:",
-      "options": [
-        "Lower highs",
-        "Equal highs",
-        "Higher highs and higher lows",
-        "Flat lines"
-      ],
-      "answer": 2,
-      "explanation": "An uptrend is characterized by sequential higher highs and higher lows, showing consistent upward momentum."
+      "question": "A 1:2 RR means:",
+      "options": ["Risk 2 to gain 1", "Risk 1 to gain 2", "Equal risk", "No risk"],
+      "correctIndex": 1
     },
     {
-      "question": "A break of structure signals:",
-      "options": [
-        "Trend continuation or shift",
-        "Weather change",
-        "Broker issue",
-        "Spread widening"
-      ],
-      "answer": 0,
-      "explanation": "A break of structure indicates a potential trend continuation or reversal, making it a critical level to monitor."
+      "question": "Overleveraging causes:",
+      "options": ["Stability", "Account blow risk", "Discipline", "Consistency"],
+      "correctIndex": 1
     },
     {
-      "question": "Liquidity often sits above:",
-      "options": [
-        "Random price",
-        "Equal highs/lows",
-        "News candles",
-        "Indicators"
-      ],
-      "answer": 1,
-      "explanation": "Liquidity pools form near equal highs and lows where institutional orders cluster, making these key levels."
+      "question": "Stop loss protects:",
+      "options": ["Ego", "Capital", "Indicators", "News"],
+      "correctIndex": 1
     },
     {
-      "question": "Patience in trading means:",
-      "options": [
-        "Forcing entries",
-        "Waiting for confirmation",
-        "Trading daily",
-        "Increasing lot size"
-      ],
-      "answer": 1,
-      "explanation": "Patience means waiting for confirmed setups that meet your trading criteria rather than impulsive entries."
+      "question": "Position sizing depends on:",
+      "options": ["Account size", "Mood", "Market rumor", "Candle color"],
+      "correctIndex": 0
     }
   ]
 }

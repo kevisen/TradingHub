@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import { QuizComponent } from '@/components/QuizComponent';
-import { getLessonById, getLessonsForInstructor } from '@/data/lessons';
 import { LessonSidebar } from '@/components/LessonSidebar';
 import { ProgressTracker } from '@/components/ProgressTracker';
 import { FinalCodeUnlock } from '@/components/FinalCodeUnlock';
@@ -25,16 +24,32 @@ export default function LessonPage() {
   const [showQuiz, setShowQuiz] = useState(false);
   const [bootcampDone, setBootcampDone] = useState(false);
   const [showFinalCode, setShowFinalCode] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Load lesson data from lessons.ts
-    const found = getLessonById(lessonId);
-    if (found) setLesson(found as any);
-
-    const instructorLessons = getLessonsForInstructor(instructorId);
-    if (instructorLessons && instructorLessons[levelId]) {
-      setAllLessons(instructorLessons[levelId] as any[]);
-    }
+    const fetchLessons = async () => {
+      try {
+        // Fetch all lessons for this instructor and level
+        const response = await fetch(`/api/lessons?instructor=${instructorId}`);
+        if (response.ok) {
+          const data = await response.json();
+          const levelLessons = data[levelId] || [];
+          setAllLessons(levelLessons);
+          
+          // Find the current lesson
+          const currentLesson = levelLessons.find((l: Lesson) => l.id === lessonId);
+          if (currentLesson) {
+            setLesson(currentLesson);
+          } else {
+            console.error('Lesson not found:', lessonId);
+          }
+        }
+      } catch (error) {
+        console.error('Failed to fetch lessons:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
     // Load progress
     const userProgress = getUserProgress(instructorId, levelId);
@@ -43,6 +58,8 @@ export default function LessonPage() {
     // Check if bootcamp is complete
     const completed = isBootcampCompleted(instructorId);
     setBootcampDone(completed);
+
+    fetchLessons();
   }, [instructorId, levelId, lessonId]);
 
   function IframePlayer({ src, title, originalEmbed }: { src: string; title: string; originalEmbed?: string }) {
@@ -179,10 +196,16 @@ export default function LessonPage() {
     setShowQuiz(false);
   };
 
-  if (!lesson) {
+  if (loading || !lesson) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-950">
-        <p className="text-gray-400">Loading lesson...</p>
+        <motion.div
+          animate={{ opacity: [0.5, 1] }}
+          transition={{ duration: 1, repeat: Infinity }}
+          className="text-gray-400 text-lg"
+        >
+          Loading lesson...
+        </motion.div>
       </div>
     );
   }
@@ -229,9 +252,26 @@ export default function LessonPage() {
             {/* Video Player - forced iframe */}
             <div className="w-full bg-black rounded-xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
                 {(() => {
-                  const src = (lesson.videoUrl || '').replace('https://www.youtube.com/embed/', 'https://www.youtube-nocookie.com/embed/');
+                  // Extract video ID from various YouTube URL formats
+                  let videoId = '';
+                  const url = lesson.videoUrl || '';
+                  
+                  if (url.includes('youtu.be/')) {
+                    // Short URL: https://youtu.be/videoId
+                    videoId = url.split('youtu.be/')[1]?.split(/[\?&]/)[0] || '';
+                  } else if (url.includes('youtube.com/watch')) {
+                    // Long URL: https://www.youtube.com/watch?v=videoId
+                    const match = url.match(/v=([a-zA-Z0-9_-]{11})/);
+                    videoId = match?.[1] || '';
+                  } else if (url.includes('youtube.com/embed/')) {
+                    // Already embed URL
+                    videoId = url.split('embed/')[1]?.split(/[\?&]/)[0] || '';
+                  }
+                  
+                  const embedUrl = videoId ? `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1` : '';
+                  
                   return (
-                    <IframePlayer src={src} title={lesson.title} originalEmbed={lesson.videoUrl} />
+                    <IframePlayer src={embedUrl} title={lesson.title} originalEmbed={embedUrl} />
                   );
                 })()}
             </div>

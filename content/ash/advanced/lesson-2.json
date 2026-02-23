@@ -1,0 +1,35 @@
+{
+  "id": "ash-advanced-2",
+  "lesson_id": "ash-advanced-2",
+  "title": "The Truth About CRT Setups: High, Low, and 50/50 Probability Explained",
+  "video_url": "https://www.youtube.com/watch?v=E9AEtiZAyqw",
+  "videoUrl": "https://www.youtube.com/watch?v=E9AEtiZAyqw",
+  "description": "Deep dive into CRT probability levels and setup evaluation",
+  "quiz": [
+    {
+      "question": "A 50/50 setup usually occurs when:",
+      "options": ["Bias is unclear", "Liquidity clear", "Displacement strong", "HTF aligned"],
+      "correctIndex": 0
+    },
+    {
+      "question": "High-probability CRT requires:",
+      "options": ["Liquidity sweep + structure shift + bias", "Indicator crossover", "News spike", "Small candles"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Low-probability trades often form during:",
+      "options": ["Choppy consolidation", "Clear expansion", "Strong displacement", "Macro alignment"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Probability improves when risk:",
+      "options": ["Is undefined", "Is controlled and defined", "Is increased", "Is ignored"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Understanding probability prevents:",
+      "options": ["Emotional overtrading", "Discipline", "Risk management", "Patience"],
+      "correctIndex": 0
+    }
+  ]
+}

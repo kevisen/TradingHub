@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-7",
+  "lesson_id": "ash-intermediate-7",
+  "title": "Should I Learn Trading? Why and How? 2025 Logic",
+  "video_url": "https://youtu.be/nkCzJ5HDj9U",
+  "videoUrl": "https://youtu.be/nkCzJ5HDj9U",
+  "description": "Realistic perspectives on learning to trade",
+  "quiz": [
+    {
+      "question": "Trading success depends mostly on:",
+      "options": ["Indicators", "Discipline and risk control", "News only", "Luck"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A realistic expectation for beginners is:",
+      "options": ["Immediate profitability", "Learning curve and drawdowns", "Guaranteed funding", "No losses"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Trading is a skill that requires:",
+      "options": ["One strategy only", "Structured learning and practice", "Emotional reactions", "High leverage"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Capital preservation is more important than:",
+      "options": ["Risk management", "Fast profits", "Discipline", "Structure"],
+      "correctIndex": 1
+    },
+    {
+      "question": "The foundation of long-term trading career is:",
+      "options": ["Consistency", "Lot size", "Indicators", "News trading"],
+      "correctIndex": 0
+    }
+  ]
+}

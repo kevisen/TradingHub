@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-9",
+  "lesson_id": "ash-intermediate-9",
+  "title": "CRT REBOOT 2025 PART 1",
+  "video_url": "https://youtu.be/TB2nGwfkRr4",
+  "videoUrl": "https://youtu.be/TB2nGwfkRr4",
+  "description": "CRT model fundamentals and liquidity-based execution",
+  "quiz": [
+    {
+      "question": "CRT reboot focuses on refining:",
+      "options": ["Indicators", "Liquidity-based execution", "News trading", "Volume spikes"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Core of CRT model is:",
+      "options": ["Risk to reward", "Liquidity sweep + structure shift", "RSI divergence", "Moving averages"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Confirmation candle must show:",
+      "options": ["Weak close", "Strong body displacement", "Doji", "Equal highs"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A failed CRT setup usually lacks:",
+      "options": ["Displacement", "Emotion", "Spread", "Volume"],
+      "correctIndex": 0
+    },
+    {
+      "question": "CRT improves entries by:",
+      "options": ["Refining timing", "Increasing lot size", "Removing stop loss", "Ignoring structure"],
+      "correctIndex": 0
+    }
+  ]
+}

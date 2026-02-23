@@ -1,64 +1,35 @@
 {
-  "title": "DAY 20 Cracking the Code CRT BIAS",
-  "description": "Advanced concepts on CRT bias, invalidation, precision, and alignment.",
-  "videoUrl": "https://youtu.be/U_vwyn-ALCY",
-  "duration": "26 mins",
-  "content": "In this lesson, you'll learn:\n\n• Aligning bias with higher timeframe structure\n• Bias invalidation signals\n• Daily bias application on lower timeframes\n• Bias strength without liquidity context\n• Probability improvement through alignment\n• Advanced bias confirmation techniques",
+  "id": "ash-beginner-27",
+  "lesson_id": "ash-beginner-27",
+  "title": "Final Method Midnight Open Bias Goodbye Method for Forex and Indices",
+  "video_url": "https://youtu.be/GMQx_yVFsi4",
+  "videoUrl": "https://youtu.be/GMQx_yVFsi4",
+  "description": "Midnight open bias method for forex and indices trading",
   "quiz": [
     {
-      "question": "Bias should align with:",
-      "options": [
-        "Higher timeframe structure",
-        "Emotions",
-        "News",
-        "Indicators"
-      ],
-      "answer": 0,
-      "explanation": "Bias must be based on and confirmed by higher timeframe structural analysis."
+      "question": "Midnight Open is used to determine:",
+      "options": ["Weekly bias", "Intraday directional bias", "Indicator setup", "Volume spike"],
+      "correctIndex": 1
     },
     {
-      "question": "Bias invalidates when:",
-      "options": [
-        "Opposing BOS forms",
-        "Volume drops",
-        "Spread narrows",
-        "Candle small"
-      ],
-      "answer": 0,
-      "explanation": "Bias is invalidated when the opposite break of structure forms."
+      "question": "Price above midnight open suggests:",
+      "options": ["Bearish bias", "Bullish bias", "Consolidation", "No bias"],
+      "correctIndex": 1
     },
     {
-      "question": "Daily bias helps refine:",
-      "options": [
-        "LTF entries",
-        "Random trades",
-        "High leverage",
-        "Emotional execution"
-      ],
-      "answer": 0,
-      "explanation": "Daily bias provides direction and context for lower timeframe trading decisions."
+      "question": "The model works best when combined with:",
+      "options": ["Liquidity targets", "RSI", "Moving averages", "News only"],
+      "correctIndex": 0
     },
     {
-      "question": "Bias without liquidity context is:",
-      "options": [
-        "Strong",
-        "Weak",
-        "Guaranteed",
-        "Precise"
-      ],
-      "answer": 1,
-      "explanation": "Bias without liquidity alignment is incomplete and lacks high-probability confirmation."
+      "question": "Bias failure occurs when:",
+      "options": ["Structure confirms opposite direction", "Candle closes strong", "Spread tightens", "Volume rises"],
+      "correctIndex": 0
     },
     {
-      "question": "Bias alignment improves:",
-      "options": [
-        "Probability",
-        "Spread",
-        "Volatility",
-        "Randomness"
-      ],
-      "answer": 0,
-      "explanation": "Proper bias alignment dramatically increases win rate and trade probability."
+      "question": "Midnight model is mainly applied for:",
+      "options": ["Long-term investing", "Intraday trading", "Swing trading only", "Scalping crypto only"],
+      "correctIndex": 1
     }
   ]
 }

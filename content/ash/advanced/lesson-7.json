@@ -1,0 +1,35 @@
+{
+  "id": "ash-advanced-7",
+  "lesson_id": "ash-advanced-7",
+  "title": "How to Find My Bias for Trading Intraday? Part 1",
+  "video_url": "https://youtu.be/Thds6fd-OC4",
+  "videoUrl": "https://youtu.be/Thds6fd-OC4",
+  "description": "Foundational bias identification for intraday trading",
+  "quiz": [
+    {
+      "question": "Intraday bias should be derived from:",
+      "options": ["Lower timeframe only", "Higher timeframe narrative", "Indicator signals", "Random breakout"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Daily liquidity targets help determine:",
+      "options": ["Entry candle color", "Directional intention", "Spread size", "Volume spike"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A bullish intraday bias requires:",
+      "options": ["Liquidity resting above", "Liquidity resting below", "Equal candles", "News only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Bias becomes weak when:",
+      "options": ["Structure aligns", "Opposing liquidity is delivered", "Displacement confirms", "Macro aligns"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Intraday bias improves:",
+      "options": ["Entry timing precision", "Emotional decisions", "Random trades", "Overtrading"],
+      "correctIndex": 0
+    }
+  ]
+}

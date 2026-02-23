@@ -1,64 +1,35 @@
 {
-  "title": "DAY 13 ORDERFLOW, HTF, LIQUIDITY",
-  "description": "Understanding displacement, FVG, HTF liquidity, and orderflow shifts.",
-  "videoUrl": "https://youtu.be/yKgStMsTQow",
-  "duration": "28 mins",
-  "content": "In this lesson, you'll learn:\n\n• What displacement indicates in trading\n• Fair Value Gap formation and mechanics\n• HTF liquidity as a major draw\n• Orderflow shift signals\n• Combining HTF and LTF analysis\n• Execution precision through alignment",
+  "id": "ash-beginner-25",
+  "lesson_id": "ash-beginner-25",
+  "title": "DAY 20 Cracking the Code CRT BIAS",
+  "video_url": "https://youtu.be/U_vwyn-ALCY",
+  "videoUrl": "https://youtu.be/U_vwyn-ALCY",
+  "description": "Understanding CRT bias and market structure",
   "quiz": [
     {
-      "question": "Displacement indicates:",
-      "options": [
-        "Institutional momentum",
-        "Weak participation",
-        "Flat range",
-        "Spread freeze"
-      ],
-      "answer": 0,
-      "explanation": "Displacement is strong impulsive movement indicating institutional buying/selling."
+      "question": "Bias should align with:",
+      "options": ["Higher timeframe structure", "Emotions", "News", "Indicators"],
+      "correctIndex": 0
     },
     {
-      "question": "Fair Value Gap forms due to:",
-      "options": [
-        "Price inefficiency",
-        "Equal highs",
-        "Volume drop",
-        "News halt"
-      ],
-      "answer": 0,
-      "explanation": "FVG occurs when there's an inefficient gap in price that traders later return to fill."
+      "question": "Bias invalidates when:",
+      "options": ["Opposing BOS forms", "Volume drops", "Spread narrows", "Candle small"],
+      "correctIndex": 0
     },
     {
-      "question": "HTF liquidity acts as:",
-      "options": [
-        "Major draw on price",
-        "Minor level",
-        "Indicator",
-        "Random zone"
-      ],
-      "answer": 0,
-      "explanation": "Higher timeframe liquidity is a major magnet that price is drawn toward."
+      "question": "Daily bias helps refine:",
+      "options": ["LTF entries", "Random trades", "High leverage", "Emotional execution"],
+      "correctIndex": 0
     },
     {
-      "question": "Orderflow shift signals:",
-      "options": [
-        "Momentum change",
-        "Spread widening",
-        "Indicator cross",
-        "Flat session"
-      ],
-      "answer": 0,
-      "explanation": "Shift in orderflow indicates changing momentum direction."
+      "question": "Bias without liquidity context is:",
+      "options": ["Strong", "Weak", "Guaranteed", "Precise"],
+      "correctIndex": 1
     },
     {
-      "question": "Alignment between HTF and LTF improves:",
-      "options": [
-        "Execution precision",
-        "Emotional bias",
-        "Risk exposure",
-        "Random entries"
-      ],
-      "answer": 0,
-      "explanation": "When HTF and LTF align, entries become more precise and probability increases."
+      "question": "Bias alignment improves:",
+      "options": ["Probability", "Spread", "Volatility", "Randomness"],
+      "correctIndex": 0
     }
   ]
 }

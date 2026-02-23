@@ -1,64 +1,35 @@
 {
-  "title": "Decoding Market Structure Part 2 Bonus",
-  "description": "Advanced structural concepts including inducement, liquidity raids, and HTF confluence.",
-  "videoUrl": "https://youtu.be/ZIy6vxdg1ZA",
-  "duration": "25 mins",
-  "content": "In this lesson, you'll learn:\n\n• Inducement before major moves\n• Liquidity raid confirmations\n• Structural shift requirements\n• Higher timeframe liquidity importance\n• Confirmation candle requirements\n• Improving probability through alignment",
+  "id": "ash-beginner-18",
+  "lesson_id": "ash-beginner-18",
+  "title": "DAY 8 - LIVE ACCOUNTS VS PROP FIRM",
+  "video_url": "https://youtu.be/PXAQycTAkkE",
+  "videoUrl": "https://youtu.be/PXAQycTAkkE",
+  "description": "Comparing live trading accounts with proprietary trading firms",
   "quiz": [
     {
-      "question": "Inducement often appears before:",
-      "options": [
-        "Major move",
-        "Weekend",
-        "Flat market",
-        "Indicator lag"
-      ],
-      "answer": 0,
-      "explanation": "Inducement typically precedes major directional moves to trap unsuspecting traders."
+      "question": "Prop firms provide:",
+      "options": ["Funded capital", "Guaranteed profit", "No rules", "Free leverage"],
+      "correctIndex": 0
     },
     {
-      "question": "Liquidity raid confirms:",
-      "options": [
-        "Stop hunt",
-        "Broker shutdown",
-        "Spread freeze",
-        "News halt"
-      ],
-      "answer": 0,
-      "explanation": "Liquidity raids are when price hunts stops and grabs liquidity before reversing."
+      "question": "Evaluation phase tests:",
+      "options": ["Discipline", "Internet speed", "Chart theme", "Indicator color"],
+      "correctIndex": 0
     },
     {
-      "question": "Structural shift requires:",
-      "options": [
-        "Candle close confirmation",
-        "Wick only",
-        "Volume drop",
-        "Gap open"
-      ],
-      "answer": 0,
-      "explanation": "A valid structural shift needs strong candle close beyond the level, not just a wick."
+      "question": "Live account risk is:",
+      "options": ["Personal capital", "Demo balance", "Free capital", "Virtual money"],
+      "correctIndex": 0
     },
     {
-      "question": "Higher timeframe liquidity is:",
-      "options": [
-        "Stronger target",
-        "Irrelevant",
-        "Random",
-        "Weak zone"
-      ],
-      "answer": 0,
-      "explanation": "Higher timeframe liquidity represents stronger institutional orders and is a stronger target."
+      "question": "Drawdown rules are:",
+      "options": ["Risk limits", "Indicator signals", "Bias model", "Session timing"],
+      "correctIndex": 0
     },
     {
-      "question": "Structure alignment improves:",
-      "options": [
-        "Probability",
-        "Emotions",
-        "Randomness",
-        "Risk exposure"
-      ],
-      "answer": 0,
-      "explanation": "When multiple timeframes align structurally, the probability of success increases significantly."
+      "question": "Prop trading requires:",
+      "options": ["Strict risk control", "Overleveraging", "Gambling", "Random trades"],
+      "correctIndex": 0
     }
   ]
 }

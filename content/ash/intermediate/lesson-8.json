@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-8",
+  "lesson_id": "ash-intermediate-8",
+  "title": "How to Read and Trade Orderflow Correctly Part 2 (2025)",
+  "video_url": "https://youtu.be/6OM2qo4zjxE",
+  "videoUrl": "https://youtu.be/6OM2qo4zjxE",
+  "description": "Advanced orderflow reading and trading techniques",
+  "quiz": [
+    {
+      "question": "Orderflow imbalance is shown by:",
+      "options": ["Strong displacement", "Equal highs", "Small candles", "Flat range"],
+      "correctIndex": 0
+    },
+    {
+      "question": "True momentum shift requires:",
+      "options": ["Volume spike only", "Structure break + displacement", "Indicator cross", "News only"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Absorption indicates:",
+      "options": ["Buyers/sellers defending level", "Weak participation", "Market close", "No liquidity"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Aggressive entries without confirmation increase:",
+      "options": ["Accuracy", "Risk exposure", "Probability", "Discipline"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Orderflow must align with:",
+      "options": ["Higher timeframe bias", "Emotions", "Random breakout", "Spread"],
+      "correctIndex": 0
+    }
+  ]
+}

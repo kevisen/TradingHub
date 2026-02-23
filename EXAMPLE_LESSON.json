@@ -1,0 +1,43 @@
+{
+  "id": "example-lesson-1",
+  "title": "Introduction to Trading",
+  "description": "Learn the basics of trading and market fundamentals",
+  "videoUrl": "https://www.youtube.com/embed/VIDEO_ID",
+  "duration": "45 minutes",
+  "note": "Reference: https://example.com/trading-guide",
+  "content": "Optional: Full lesson content can go here",
+  "mcqs": [
+    {
+      "question": "What is the primary goal of trading?",
+      "options": [
+        "To make quick profits",
+        "To exchange assets based on market analysis",
+        "To gamble with money",
+        "To learn mathematics"
+      ],
+      "correctIndex": 1,
+      "explanation": "Trading involves exchanging financial assets based on market analysis and strategy, not gambling."
+    },
+    {
+      "question": "Which of the following is a key principle in trading?",
+      "options": [
+        "Risk Management",
+        "Emotional decisions",
+        "Following crowd sentiment",
+        "Trading with all capital"
+      ],
+      "correctIndex": 0,
+      "explanation": "Risk management is crucial - never risk more than you can afford to lose."
+    },
+    {
+      "question": "What does market volatility refer to?",
+      "options": [
+        "The price of an asset",
+        "The speed at which prices change",
+        "The volume of trades",
+        "The time of day"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-6",
+  "lesson_id": "ash-intermediate-6",
+  "title": "AMD Model PO3 Day Level 2025",
+  "video_url": "https://youtu.be/ZseBHV2FQRg",
+  "videoUrl": "https://youtu.be/ZseBHV2FQRg",
+  "description": "Accumulation, Manipulation, Distribution model at day level",
+  "quiz": [
+    {
+      "question": "AMD stands for:",
+      "options": ["Accumulation, Manipulation, Distribution", "Average Market Direction", "Advanced Macro Day", "Automatic Model Design"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Manipulation phase typically:",
+      "options": ["Sweeps liquidity", "Trends strongly", "Closes session", "Removes volatility"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Distribution phase delivers:",
+      "options": ["Main move", "Range", "Small candles", "No liquidity"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Day-level model focuses on:",
+      "options": ["Intraday structure", "Weekly trend", "Monthly bias", "Indicators"],
+      "correctIndex": 0
+    },
+    {
+      "question": "PO3 enhances:",
+      "options": ["Timing accuracy", "Emotional trading", "Random entries", "Spread"],
+      "correctIndex": 0
+    }
+  ]
+}

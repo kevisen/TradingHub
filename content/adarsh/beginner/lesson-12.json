@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-12",
+  "lesson_id": "adarsh-beginner-12",
+  "title": "EP9 - Structure Part 2",
+  "video_url": "https://youtu.be/RLjCeoXJsFA?si=SMKEHMkmIxUgDLNv",
+  "videoUrl": "https://youtu.be/RLjCeoXJsFA?si=SMKEHMkmIxUgDLNv",
+  "description": "Advanced market structure and zone analysis",
+  "quiz": [
+    {
+      "question": "Structure Part 2 continues:",
+      "options": ["Market structure concepts", "Movies", "Games", "Biology"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Trends help traders:",
+      "options": ["Find direction", "Cook", "Paint", "Run"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Structure Part 2 likely covers:",
+      "options": ["Zones", "Music", "Cars", "Travel"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Zones help define:",
+      "options": ["Breakouts", "Recipes", "Songs", "Weather"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Understanding structure helps:",
+      "options": ["Trading decisions", "Sleeping", "Texting", "Gaming"],
+      "correctIndex": 0
+    }
+  ]
+}

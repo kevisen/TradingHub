@@ -1,42 +1,35 @@
 {
-  "title": "What is a Market Structure?",
-  "description": "Learn the fundamentals of market structure in trading. Understanding Higher Highs, Higher Lows, Lower Highs, and Lower Lows is essential for technical analysis.",
-  "videoUrl": "/videos/ash/beginner/lesson-1.mp4",
-  "duration": "15 mins",
-  "content": "In this lesson, you'll learn:\n\n• What market structure is\n• How to identify Higher Highs (HH) and Higher Lows (HL) in uptrends\n• How to identify Lower Highs (LH) and Lower Lows (LL) in downtrends\n• Why market structure is the foundation of trading\n• How to use this knowledge in your trading plan",
+  "id": "ash-beginner-1",
+  "lesson_id": "ash-beginner-1",
+  "title": "Intro",
+  "video_url": "https://www.youtube.com/watch?v=qtqP8dXl1Fo&t=3s",
+  "videoUrl": "https://www.youtube.com/watch?v=qtqP8dXl1Fo&t=3s",
+  "description": "Introduction to trading bootcamp fundamentals",
   "quiz": [
     {
-      "question": "Which of the following defines an uptrend?",
-      "options": [
-        "Higher Highs and Higher Lows",
-        "Lower Highs and Lower Lows",
-        "Higher Highs and Lower Highs",
-        "Sideways price action"
-      ],
-      "answer": 0,
-      "explanation": "An uptrend is characterized by Higher Highs (HH) and Higher Lows (HL), showing that buyers are in control and each peak/trough is progressively higher."
+      "question": "What is the primary objective of a trading bootcamp?",
+      "options": ["Entertainment", "Structured skill development", "Gambling practice", "Fast profit only"],
+      "correctIndex": 1
     },
     {
-      "question": "What does 'LH' stand for in market structure?",
-      "options": [
-        "Lower High",
-        "Ling High",
-        "Long High",
-        "Level High"
-      ],
-      "answer": 0,
-      "explanation": "LH stands for Lower High, which occurs when the price reaches a lower peak than the previous high. This is typically seen in downtrends or when a trend is weakening."
+      "question": "A trader should first focus on:",
+      "options": ["Strategy understanding", "Buying signals", "High leverage", "Copying others"],
+      "correctIndex": 0
     },
     {
-      "question": "Why is understanding market structure important?",
-      "options": [
-        "It helps identify the direction of the trend",
-        "It eliminates risk completely",
-        "It guarantees profitable trades",
-        "It removes the need for stop losses"
-      ],
-      "answer": 0,
-      "explanation": "Understanding market structure helps traders identify the direction of the trend and make informed trading decisions. However, no analysis method eliminates risk or guarantees profits."
+      "question": "Consistency in trading comes from:",
+      "options": ["Luck", "Discipline and rules", "News guessing", "Random entries"],
+      "correctIndex": 1
+    },
+    {
+      "question": "The foundation of trading success is:",
+      "options": ["Indicators", "Psychology + Risk Management", "Social media", "AI bots"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Learning before earning means:",
+      "options": ["Trade immediately", "Master basics first", "Borrow capital", "Ignore risk"],
+      "correctIndex": 1
     }
   ]
 }

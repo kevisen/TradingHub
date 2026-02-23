@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-4",
+  "lesson_id": "adarsh-beginner-4",
+  "title": "EP 4: PSYCHOLOGY trading (NP STORY)",
+  "video_url": "https://youtu.be/_-6KeVqVTPA?si=UeZ0aBIcTM-RJ7WT",
+  "videoUrl": "https://youtu.be/_-6KeVqVTPA?si=UeZ0aBIcTM-RJ7WT",
+  "description": "Trader psychology through real-world narratives",
+  "quiz": [
+    {
+      "question": "Trader psychology mainly deals with:",
+      "options": ["Emotions in trading", "Coding", "Music", "Biology"],
+      "correctIndex": 0
+    },
+    {
+      "question": "NP Story likely illustrates:",
+      "options": ["A psychological concept", "Sports game", "Recipe", "Movie summary"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Controlling emotions helps a trader to:",
+      "options": ["Trade better", "Sleep worse", "Eat faster", "Watch TV"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Fear of losing might cause:",
+      "options": ["Better decisions", "Hesitation", "Running", "Singing"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Greed affects a trader by:",
+      "options": ["Improving psychology", "Affecting decisions", "Ignoring the market", "Listening to songs"],
+      "correctIndex": 1
+    }
+  ]
+}

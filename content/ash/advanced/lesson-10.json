@@ -1,0 +1,35 @@
+{
+  "id": "ash-advanced-10",
+  "lesson_id": "ash-advanced-10",
+  "title": "CRT With FIB Precision! Part 1",
+  "video_url": "https://youtu.be/rkIFArXQkcI",
+  "videoUrl": "https://youtu.be/rkIFArXQkcI",
+  "description": "Fibonacci integration with CRT for refined entries",
+  "quiz": [
+    {
+      "question": "Fibonacci in CRT is used to measure:",
+      "options": ["Retracement depth", "Spread", "Volume", "News impact"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Optimal retracement zone increases:",
+      "options": ["Entry precision", "Emotional trading", "Random breakout", "Risk exposure"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Fib alignment is strongest when combined with:",
+      "options": ["Liquidity + displacement", "Indicator cross", "Volume only", "News spike"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Entering before retracement completes increases:",
+      "options": ["Accuracy", "Risk", "Probability", "Discipline"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Advanced CRT + Fib reduces:",
+      "options": ["Stop size", "Structure", "Bias", "Discipline"],
+      "correctIndex": 0
+    }
+  ]
+}

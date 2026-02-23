@@ -1,64 +1,35 @@
 {
-  "title": "How to Choose the Right Market",
-  "description": "Learn to select the right market for your trading style based on characteristics like volatility, liquidity, and trading schedule.",
-  "videoUrl": "https://youtu.be/13tkhWLTvTg",
-  "duration": "18 mins",
-  "content": "In this lesson, you'll discover:\n\n• Different market types: Forex, Crypto, Futures\n• Volatility profiles of different markets\n• Liquidity and its impact on trading\n• Session times and their importance\n• How to match markets to your personality and lifestyle",
+  "id": "ash-beginner-5",
+  "lesson_id": "ash-beginner-5",
+  "title": "Ash Training Day 1.2",
+  "video_url": "https://youtu.be/iGgk1dMjs24",
+  "videoUrl": "https://youtu.be/iGgk1dMjs24",
+  "description": "Breakout confirmation and internal market structure",
   "quiz": [
     {
-      "question": "Forex market trades:",
-      "options": [
-        "Stocks",
-        "Commodities",
-        "Currency pairs",
-        "NFTs"
-      ],
-      "answer": 2,
-      "explanation": "The Forex market is where currency pairs are traded, such as EUR/USD, representing the exchange rates between two currencies."
+      "question": "What confirms a valid breakout?",
+      "options": ["One wick", "Strong body close beyond level", "Small doji", "Volume drop"],
+      "correctIndex": 1
     },
     {
-      "question": "Crypto markets are known for:",
-      "options": [
-        "Low volatility",
-        "High volatility",
-        "No movement",
-        "Fixed pricing"
-      ],
-      "answer": 1,
-      "explanation": "Cryptocurrency markets experience high volatility, which can create both opportunities and risks for traders."
+      "question": "Inducement in trading means:",
+      "options": ["Random movement", "Luring traders before reversal", "News spike", "Weekend gap"],
+      "correctIndex": 1
     },
     {
-      "question": "Futures contracts are traded on:",
-      "options": [
-        "Centralized exchanges",
-        "WhatsApp",
-        "Instagram",
-        "Forums"
-      ],
-      "answer": 0,
-      "explanation": "Futures are traded on centralized exchanges like CME for commodities and crypto futures on regulated platforms."
+      "question": "Internal structure refers to:",
+      "options": ["Lower timeframe movement", "Broker policy", "Hardware specs", "Internet lag"],
+      "correctIndex": 0
     },
     {
-      "question": "Choosing a market depends on:",
-      "options": [
-        "Personality and schedule",
-        "Random choice",
-        "Friend's advice",
-        "Logo design"
-      ],
-      "answer": 0,
-      "explanation": "Choose a market that aligns with your personality, availability, and trading goals for consistency."
+      "question": "Reaction from HTF zone suggests:",
+      "options": ["Strong interest area", "Weak chart", "Bad broker", "Spread widening"],
+      "correctIndex": 0
     },
     {
-      "question": "Liquidity affects:",
-      "options": [
-        "Execution speed",
-        "Chart theme",
-        "Screen size",
-        "Mouse DPI"
-      ],
-      "answer": 0,
-      "explanation": "Higher liquidity enables faster trade execution with minimal slippage and better pricing."
+      "question": "Confirmation reduces:",
+      "options": ["Risk exposure", "Profit", "Screen time", "Charts"],
+      "correctIndex": 0
     }
   ]
 }

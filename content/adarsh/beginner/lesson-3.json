@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-3",
+  "lesson_id": "adarsh-beginner-3",
+  "title": "EP 3: RISK MANAGEMENT AND PSYCHOLOGY",
+  "video_url": "https://youtu.be/pOTnCxIK1VE?si=jNEfU4ldepFqsYjt",
+  "videoUrl": "https://youtu.be/pOTnCxIK1VE?si=jNEfU4ldepFqsYjt",
+  "description": "Risk management and trader psychology fundamentals",
+  "quiz": [
+    {
+      "question": "Risk Management in trading helps to:",
+      "options": ["Lose more money", "Protect capital", "Write essays", "None"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Trader psychology influences:",
+      "options": ["Execution of trades", "Weather", "Phone battery", "Car speed"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A tool in risk management is:",
+      "options": ["Stop loss", "Bookmark", "Calendar", "Alarm"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Fear and greed are part of:",
+      "options": ["Economics", "Trader psychology", "Cooking", "Physics"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which reduces risk?",
+      "options": ["Risk management", "Ignoring charts", "Sleeping", "Random trades"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-19",
+  "lesson_id": "ash-intermediate-19",
+  "title": "THE PERFECT PROP FIRM?",
+  "video_url": "https://youtu.be/i1Vn0YzsN8o",
+  "videoUrl": "https://youtu.be/i1Vn0YzsN8o",
+  "description": "Evaluating and choosing the right prop firm",
+  "quiz": [
+    {
+      "question": "A good prop firm evaluation prioritizes:",
+      "options": ["Consistent risk management", "Fast profits", "High leverage", "No stop trading"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Trailing drawdown is dangerous because it:",
+      "options": ["Shrinks allowed buffer", "Increases profit", "Removes rules", "Boosts leverage"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Passing a challenge requires:",
+      "options": ["Discipline over aggression", "High lot size", "News trading", "Gambling"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Scaling plans depend on:",
+      "options": ["Consistency", "Emotion", "Random luck", "Indicator stacking"],
+      "correctIndex": 0
+    },
+    {
+      "question": "The \"perfect\" prop firm still requires:",
+      "options": ["Personal risk control", "Blind trust", "No strategy", "Emotional trading"],
+      "correctIndex": 0
+    }
+  ]
+}

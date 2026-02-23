@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-17",
+  "lesson_id": "ash-intermediate-17",
+  "title": "CRT FOCUS 2025 PART 2",
+  "video_url": "https://youtu.be/o6GnV3W5t6w",
+  "videoUrl": "https://youtu.be/o6GnV3W5t6w",
+  "description": "Advanced CRT timing and liquidity delivery mechanisms",
+  "quiz": [
+    {
+      "question": "Advanced CRT incorporates:",
+      "options": ["Multi-session timing", "RSI divergence", "Volume spikes only", "Random structure"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Liquidity delivery mechanism refers to:",
+      "options": ["How price seeks stops", "Broker spreads", "Indicator cross", "Candle color"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Displacement confirms:",
+      "options": ["Institutional participation", "Low volatility", "Flat session", "Spread freeze"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Entry without displacement increases:",
+      "options": ["Risk", "Accuracy", "Probability", "Discipline"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Precision scaling requires:",
+      "options": ["Structured partial entries", "Full leverage", "No stop", "Emotional bias"],
+      "correctIndex": 0
+    }
+  ]
+}

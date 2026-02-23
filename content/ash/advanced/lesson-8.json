@@ -1,0 +1,35 @@
+{
+  "id": "ash-advanced-8",
+  "lesson_id": "ash-advanced-8",
+  "title": "How to Find My Bias for Trading Intraday? Part 2",
+  "video_url": "https://youtu.be/LlEXPpSatVQ",
+  "videoUrl": "https://youtu.be/LlEXPpSatVQ",
+  "description": "Advanced bias refinement and execution",
+  "quiz": [
+    {
+      "question": "Refined bias includes analysis of:",
+      "options": ["Session timing", "Indicator stacking", "Spread only", "Volume only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Liquidity engineering suggests price will:",
+      "options": ["Remain flat", "Seek resting stops", "Ignore structure", "Freeze"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A true bearish bias aligns with:",
+      "options": ["Lower highs + liquidity above", "Higher highs", "Equal candles", "News spike"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Bias confirmation should precede:",
+      "options": ["Entry execution", "Emotional reaction", "Increasing lot size", "Removing stop"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Overconfidence in bias leads to:",
+      "options": ["Poor risk control", "Higher accuracy", "More discipline", "Precision"],
+      "correctIndex": 0
+    }
+  ]
+}

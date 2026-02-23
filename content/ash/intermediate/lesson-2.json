@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-2",
+  "lesson_id": "ash-intermediate-2",
+  "title": "Buffer, E-Mini vs Micro, Risk Contract",
+  "video_url": "https://youtu.be/8bk1g21Gw4w",
+  "videoUrl": "https://youtu.be/8bk1g21Gw4w",
+  "description": "Understanding contract types and risk management buffers",
+  "quiz": [
+    {
+      "question": "Micro contracts are:",
+      "options": ["Larger than E-mini", "Smaller in tick value", "Higher leverage", "Less volatile"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A buffer in risk management is used to:",
+      "options": ["Increase position size", "Prevent early stop-out", "Avoid profit", "Remove rules"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Contract sizing should depend on:",
+      "options": ["Emotions", "Account size", "News", "Spread"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Overleveraging usually leads to:",
+      "options": ["Stability", "Faster drawdown", "Better accuracy", "Institutional flow"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Tick value directly affects:",
+      "options": ["Emotional bias", "Dollar risk per trade", "Spread", "Volume"],
+      "correctIndex": 1
+    }
+  ]
+}

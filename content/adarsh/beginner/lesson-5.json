@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-5",
+  "lesson_id": "adarsh-beginner-5",
+  "title": "EP 5: ECONOMIC NEWS",
+  "video_url": "https://youtu.be/_-6KeVqVTPA?si=kRhoYGuNeKKDy9fm",
+  "videoUrl": "https://youtu.be/_-6KeVqVTPA?si=kRhoYGuNeKKDy9fm",
+  "description": "Economic news and its impact on markets",
+  "quiz": [
+    {
+      "question": "Economic news impacts:",
+      "options": ["Music charts", "Financial markets", "Movie ratings", "Weather"],
+      "correctIndex": 1
+    },
+    {
+      "question": "An example of economic news is:",
+      "options": ["GDP data", "Sports score", "Song release", "TV show"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Traders watch news to:",
+      "options": ["Predict moves", "Eat food", "Sleep", "Drink coffee"],
+      "correctIndex": 0
+    },
+    {
+      "question": "News affects:",
+      "options": ["Price volatility", "Car speed", "Phone apps", "Fitness"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Economic calendars list:",
+      "options": ["Events", "Movies", "Pets", "Games"],
+      "correctIndex": 0
+    }
+  ]
+}

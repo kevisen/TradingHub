@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-18",
+  "lesson_id": "ash-intermediate-18",
+  "title": "CRT FOCUS 2025 PART 2.2",
+  "video_url": "https://youtu.be/ix_lFzA9iMA",
+  "videoUrl": "https://youtu.be/ix_lFzA9iMA",
+  "description": "Invalidation logic and model mastery techniques",
+  "quiz": [
+    {
+      "question": "Invalidation logic protects:",
+      "options": ["Capital", "Ego", "Spread", "Volume"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A failed liquidity grab often leads to:",
+      "options": ["Reversal", "Consolidation only", "Market close", "No movement"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Advanced confluence includes:",
+      "options": ["Bias + liquidity + time", "Indicator stacking", "News trading only", "Random entries"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Patience improves:",
+      "options": ["Execution quality", "Fear", "Spread", "Volatility"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Model mastery requires:",
+      "options": ["Repetition and journaling", "Higher leverage", "News chasing", "Copy trading"],
+      "correctIndex": 0
+    }
+  ]
+}

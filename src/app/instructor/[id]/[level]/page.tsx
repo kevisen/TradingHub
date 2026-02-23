@@ -6,65 +6,32 @@ import { motion } from 'framer-motion';
 import { ChevronLeft } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Level } from '@/lib/types';
-import lessonsData, { getLessonsForInstructor } from '@/data/lessons';
-
-const fakeContent = {
-  ash: {
-    beginner: [
-      { id: 'lesson-1', title: 'What is a Market Structure?' },
-      { id: 'lesson-2', title: 'Support and Resistance Levels' },
-    ],
-    intermediate: [
-      { id: 'lesson-1', title: 'Supply and Demand Zones' },
-      { id: 'lesson-2', title: 'Confluence Techniques' },
-    ],
-    advanced: [
-      { id: 'lesson-1', title: 'Algorithmic Trading and Market Makers' },
-      { id: 'lesson-2', title: 'Building Professional Trading Systems' },
-    ],
-  },
-  adarsh: {
-    beginner: [
-      { id: 'lesson-1', title: 'Reading the Orderbook' },
-      { id: 'lesson-2', title: 'Understanding Order Flow' },
-    ],
-    intermediate: [
-      { id: 'lesson-1', title: 'Advanced Order Flow Analysis' },
-      { id: 'lesson-2', title: 'Institutional Order Patterns' },
-    ],
-    advanced: [
-      { id: 'lesson-1', title: 'Real-Time Order Flow Trading' },
-      { id: 'lesson-2', title: 'Building Order Flow Systems' },
-    ],
-  },
-  'jean-mastan': {
-    beginner: [
-      { id: 'lesson-1', title: 'Risk Management Essentials' },
-      { id: 'lesson-2', title: 'Position Sizing Strategies' },
-    ],
-    intermediate: [
-      { id: 'lesson-1', title: 'Advanced Risk Metrics' },
-      { id: 'lesson-2', title: 'Managing Psychological Risk' },
-    ],
-    advanced: [
-      { id: 'lesson-1', title: 'Portfolio Risk Management' },
-      { id: 'lesson-2', title: 'Building Robust Trading Systems' },
-    ],
-  },
-};
 
 export default function LevelPage() {
   const params = useParams();
   const instructorId = params.id as string;
   const levelId = params.level as Level;
   const [lessons, setLessons] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Load lessons from lessons.ts
-    const content = getLessonsForInstructor(instructorId);
-    if (content && content[levelId]) {
-      setLessons(content[levelId]);
-    }
+    const fetchLessons = async () => {
+      try {
+        const response = await fetch(`/api/lessons?instructor=${instructorId}`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data[levelId]) {
+            setLessons(data[levelId]);
+          }
+        }
+      } catch (error) {
+        console.error('Failed to fetch lessons:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchLessons();
   }, [instructorId, levelId]);
 
   return (

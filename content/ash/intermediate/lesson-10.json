@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-10",
+  "lesson_id": "ash-intermediate-10",
+  "title": "CRT REBOOT 2025 PART 2",
+  "video_url": "https://youtu.be/bvWYgos3R9g",
+  "videoUrl": "https://youtu.be/bvWYgos3R9g",
+  "description": "Advanced CRT techniques and precision execution",
+  "quiz": [
+    {
+      "question": "Advanced CRT incorporates:",
+      "options": ["Session timing", "Indicator stacking", "News only", "Volume only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Liquidity pools are commonly found at:",
+      "options": ["Equal highs/lows", "Random candles", "Indicators", "Spread levels"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Invalidation in CRT occurs when:",
+      "options": ["Opposite BOS forms", "Candle small", "Spread narrows", "Volume low"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Precision entry is improved by:",
+      "options": ["Lower timeframe confirmation", "Emotional bias", "Random execution", "Overleveraging"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Risk management in CRT ensures:",
+      "options": ["Longevity", "No losses", "Higher leverage", "Fast profits"],
+      "correctIndex": 0
+    }
+  ]
+}

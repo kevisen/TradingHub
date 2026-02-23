@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-8",
+  "lesson_id": "adarsh-beginner-8",
+  "title": "EP7: MT5 PART 2",
+  "video_url": "https://youtu.be/Cc_Zhh0QPoE?si=ARTo4f6UBDJkiWDu",
+  "videoUrl": "https://youtu.be/Cc_Zhh0QPoE?si=ARTo4f6UBDJkiWDu",
+  "description": "Advanced MetaTrader 5 features and functionality",
+  "quiz": [
+    {
+      "question": "MT5 Part 2 likely continues:",
+      "options": ["Advanced MT5 features", "Gardening", "Painting", "Reading"],
+      "correctIndex": 0
+    },
+    {
+      "question": "MT5 can place:",
+      "options": ["Orders", "Photos", "Videos", "Emails"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Risk tools in MT5 are:",
+      "options": ["Stop loss", "Music", "Stories", "Books"],
+      "correctIndex": 0
+    },
+    {
+      "question": "MT5 allows:",
+      "options": ["Indicators", "Temperature", "Games", "Maps"],
+      "correctIndex": 0
+    },
+    {
+      "question": "MT5 Part 2 helps traders:",
+      "options": ["Trade effectively", "Dance", "Fly", "Cook"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-5",
+  "lesson_id": "ash-intermediate-5",
+  "title": "09:30 Opening Range Gap + VAR Method (CME Only)",
+  "video_url": "https://youtu.be/5cUBA_ft9bg",
+  "videoUrl": "https://youtu.be/5cUBA_ft9bg",
+  "description": "9:30 EST CME session trading with VAR method",
+  "quiz": [
+    {
+      "question": "09:30 EST represents:",
+      "options": ["London close", "NY cash open", "Asia open", "Market close"],
+      "correctIndex": 1
+    },
+    {
+      "question": "VAR method primarily measures:",
+      "options": ["Risk tolerance", "Statistical risk exposure", "Volume", "Spread"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Opening range expansion usually follows:",
+      "options": ["Liquidity sweep", "Random candle", "Flat session", "Holiday"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Trading CME requires awareness of:",
+      "options": ["Session timing", "Indicators only", "News only", "Spread only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Combining gap + CRT bias improves:",
+      "options": ["Precision", "Randomness", "Fear", "Overtrading"],
+      "correctIndex": 0
+    }
+  ]
+}

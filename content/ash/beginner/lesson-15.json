@@ -1,64 +1,35 @@
 {
-  "title": "Day 6 FAQ - WARM UP",
-  "description": "The importance of warming up before trading, journaling, and building trading routines.",
-  "videoUrl": "https://youtu.be/KaLcCgYhPnk",
-  "duration": "19 mins",
-  "content": "In this lesson, you'll learn:\n\n• Why warming up before trading is crucial\n• Pre-trading routine practices\n• Pattern recognition improvement\n• Journaling for self-improvement\n• Building consistency through routine\n• Reducing emotional impulsiveness",
+  "id": "ash-beginner-15",
+  "lesson_id": "ash-beginner-15",
+  "title": "Decoding Market Structure Part 1 Bonus",
+  "video_url": "https://youtu.be/U2LmyigJRPo",
+  "videoUrl": "https://youtu.be/U2LmyigJRPo",
+  "description": "Advanced market structure analysis techniques",
   "quiz": [
     {
-      "question": "Warm-up before trading helps improve:",
-      "options": [
-        "Emotional control",
-        "Internet speed",
-        "Broker leverage",
-        "Spread size"
-      ],
-      "answer": 0,
-      "explanation": "Warm-up routines help traders get into the right mental state and reduce emotional trading."
+      "question": "External structure refers to:",
+      "options": ["Higher timeframe swing", "1-minute chart", "Indicator crossover", "News event"],
+      "correctIndex": 0
     },
     {
-      "question": "Reviewing previous trades improves:",
-      "options": [
-        "Screen brightness",
-        "Pattern recognition",
-        "Mouse accuracy",
-        "Chart theme"
-      ],
-      "answer": 1,
-      "explanation": "Reviewing past trades helps you recognize patterns and learn from your mistakes."
+      "question": "Internal structure helps refine:",
+      "options": ["Entry timing", "Bias only", "Spread", "Broker selection"],
+      "correctIndex": 0
     },
     {
-      "question": "A trading routine builds:",
-      "options": [
-        "Randomness",
-        "Consistency",
-        "Overtrading",
-        "Fear"
-      ],
-      "answer": 1,
-      "explanation": "Consistent routines create discipline and predictable trading behavior."
+      "question": "Break of Structure (BOS) confirms:",
+      "options": ["Continuation", "Random move", "Chart glitch", "Flat market"],
+      "correctIndex": 0
     },
     {
-      "question": "Journaling helps identify:",
-      "options": [
-        "Chart colors",
-        "Behavioral mistakes",
-        "Broker fees",
-        "Candle size"
-      ],
-      "answer": 1,
-      "explanation": "Journaling reveals patterns in your trading errors and emotional decisions."
+      "question": "Change of Character (CHOCH) signals:",
+      "options": ["Possible shift", "Volume spike only", "Spread widening", "Broker issue"],
+      "correctIndex": 0
     },
     {
-      "question": "Preparation reduces:",
-      "options": [
-        "Risk awareness",
-        "Emotional impulsiveness",
-        "Liquidity",
-        "Volatility"
-      ],
-      "answer": 1,
-      "explanation": "Well-prepared traders make thoughtful decisions rather than impulsive emotional trades."
+      "question": "Structural analysis prevents:",
+      "options": ["Blind entries", "Profit", "Liquidity", "Volatility"],
+      "correctIndex": 0
     }
   ]
 }

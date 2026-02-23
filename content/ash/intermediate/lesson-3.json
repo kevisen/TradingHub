@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-3",
+  "lesson_id": "ash-intermediate-3",
+  "title": "The True Day Range Gap 2025 Part 1",
+  "video_url": "https://youtu.be/mmsXfBgABIw",
+  "videoUrl": "https://youtu.be/mmsXfBgABIw",
+  "description": "Trading day range gaps effectively",
+  "quiz": [
+    {
+      "question": "A day range gap forms between:",
+      "options": ["Two sessions", "Two brokers", "Indicators", "Equal highs"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Gaps often act as:",
+      "options": ["Liquidity magnets", "Random zones", "Indicator signals", "Stop loss"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Trading gaps requires confirmation of:",
+      "options": ["Structure", "Emotions", "News only", "Volume only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Gap rejection indicates:",
+      "options": ["Strong defense", "Weak market", "Spread freeze", "Market close"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Futures gap strategy works best during:",
+      "options": ["Active sessions", "Weekend", "Low liquidity hours", "Holiday"],
+      "correctIndex": 0
+    }
+  ]
+}

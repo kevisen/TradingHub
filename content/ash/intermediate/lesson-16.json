@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-16",
+  "lesson_id": "ash-intermediate-16",
+  "title": "CRT FOCUS 2025 PART 1",
+  "video_url": "https://youtu.be/QrZCjhXShB4",
+  "videoUrl": "https://youtu.be/QrZCjhXShB4",
+  "description": "Focused CRT execution and liquidity engineering",
+  "quiz": [
+    {
+      "question": "CRT focus emphasizes:",
+      "options": ["Liquidity engineering", "Indicators", "News spikes", "Volume only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Entry refinement requires:",
+      "options": ["LTF confirmation", "Blind execution", "No stop", "High leverage"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Precision improves when:",
+      "options": ["Time + structure align", "Emotions increase", "Spread widens", "Volume low"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Poor execution often comes from:",
+      "options": ["Rushing entries", "Discipline", "Bias alignment", "Patience"],
+      "correctIndex": 0
+    },
+    {
+      "question": "CRT edge is strongest when:",
+      "options": ["Liquidity is targeted", "Random entries occur", "Indicators stack", "News only"],
+      "correctIndex": 0
+    }
+  ]
+}

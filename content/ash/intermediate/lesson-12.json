@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-12",
+  "lesson_id": "ash-intermediate-12",
+  "title": "How to Trade Opening Range Gap 09:30 with CRT Bias Part 2",
+  "video_url": "https://youtu.be/JyXZnOcYgCw",
+  "videoUrl": "https://youtu.be/JyXZnOcYgCw",
+  "description": "Advanced 9:30 opening range gap trading strategies",
+  "quiz": [
+    {
+      "question": "Gap rejection suggests:",
+      "options": ["Reversal potential", "Continuation only", "Flat session", "Spread freeze"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Stop placement should be:",
+      "options": ["Below/above liquidity", "Random", "Wide always", "No stop"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Confirmation must align with:",
+      "options": ["HTF bias", "Emotions", "News only", "Indicators only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Overtrading ORG setups causes:",
+      "options": ["Discipline", "Drawdown", "Accuracy", "Precision"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Patience during open improves:",
+      "options": ["Execution quality", "Fear", "Spread", "Randomness"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-7",
+  "lesson_id": "adarsh-beginner-7",
+  "title": "EP7: MT5 PART 1",
+  "video_url": "https://youtu.be/Uizutfordds?si=PvzY9giL5wzc9P65",
+  "videoUrl": "https://youtu.be/Uizutfordds?si=PvzY9giL5wzc9P65",
+  "description": "Introduction to MetaTrader 5 platform basics",
+  "quiz": [
+    {
+      "question": "MT5 stands for:",
+      "options": ["MetaTrader 5", "Movie Title 5", "Music Team 5", "None"],
+      "correctIndex": 0
+    },
+    {
+      "question": "MT5 is used for:",
+      "options": ["Trading", "Cooking", "Driving", "Swimming"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Part 1 teaches:",
+      "options": ["Platform basics", "Geography", "History", "Biology"],
+      "correctIndex": 0
+    },
+    {
+      "question": "MT5 displays:",
+      "options": ["Charts", "Maps", "Movies", "Photos"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Traders use MT5 to:",
+      "options": ["Place trades", "Sing songs", "Sleep", "Shop online"],
+      "correctIndex": 0
+    }
+  ]
+}

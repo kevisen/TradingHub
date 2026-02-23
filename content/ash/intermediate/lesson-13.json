@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-13",
+  "lesson_id": "ash-intermediate-13",
+  "title": "ICT 2025 Model Completed Bias V-Shape Target News (Part 1)",
+  "video_url": "https://youtu.be/1IdY0ALzcC0",
+  "videoUrl": "https://youtu.be/1IdY0ALzcC0",
+  "description": "V-Shape recovery and bias-based targeting",
+  "quiz": [
+    {
+      "question": "V-shape recovery indicates:",
+      "options": ["Aggressive reversal", "Weak momentum", "Range", "Market close"],
+      "correctIndex": 0
+    },
+    {
+      "question": "News events create:",
+      "options": ["Liquidity spikes", "Flat session", "Spread freeze", "Equal highs"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Bias confirmation must precede:",
+      "options": ["Entry", "News", "Spread", "Volume"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Target selection should be:",
+      "options": ["Liquidity-based", "Random", "Indicator-based", "Emotion-based"],
+      "correctIndex": 0
+    },
+    {
+      "question": "V-shape entries require:",
+      "options": ["Fast reaction + confirmation", "Blind entry", "No stop", "High leverage"],
+      "correctIndex": 0
+    }
+  ]
+}

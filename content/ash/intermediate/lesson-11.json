@@ -1,0 +1,35 @@
+{
+  "id": "ash-intermediate-11",
+  "lesson_id": "ash-intermediate-11",
+  "title": "How to Trade Opening Range Gap 09:30 with CRT Bias Part 1",
+  "video_url": "https://youtu.be/Ux20CEOWAaI",
+  "videoUrl": "https://youtu.be/Ux20CEOWAaI",
+  "description": "Trading 9:30 opening range gaps with CRT bias",
+  "quiz": [
+    {
+      "question": "Opening range gap provides:",
+      "options": ["Liquidity reference", "Indicator signal", "Spread", "Random entry"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Combining CRT bias with ORG improves:",
+      "options": ["Structure alignment", "Emotional trading", "Overtrading", "Risk"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Entry should occur after:",
+      "options": ["Confirmation displacement", "First candle", "News spike", "Random breakout"],
+      "correctIndex": 0
+    },
+    {
+      "question": "False breakout often lacks:",
+      "options": ["Volume", "Structure shift", "Emotion", "Spread"],
+      "correctIndex": 1
+    },
+    {
+      "question": "09:30 timing matters due to:",
+      "options": ["Institutional flow", "Random volatility", "Spread freeze", "Weekend"],
+      "correctIndex": 0
+    }
+  ]
+}

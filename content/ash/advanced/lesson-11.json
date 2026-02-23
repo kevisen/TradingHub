@@ -1,0 +1,35 @@
+{
+  "id": "ash-advanced-11",
+  "lesson_id": "ash-advanced-11",
+  "title": "CRT With FIB Precision! Part 2",
+  "video_url": "https://youtu.be/J1wE0FmN09Y",
+  "videoUrl": "https://youtu.be/J1wE0FmN09Y",
+  "description": "Premium and discount zones with Fibonacci confluence",
+  "quiz": [
+    {
+      "question": "Premium and discount zones are defined by:",
+      "options": ["50% equilibrium level", "RSI", "Volume", "Spread"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Selling in premium aligns with:",
+      "options": ["Bearish bias", "Bullish bias", "Random breakout", "News only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Confluence increases when:",
+      "options": ["Fib aligns with liquidity pool", "Indicator cross appears", "Volume drops", "Spread widens"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Invalidating a fib-based trade occurs when:",
+      "options": ["Structure breaks opposite direction", "Candle small", "Spread tight", "Volume low"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Mastery of fib precision requires:",
+      "options": ["Consistent backtesting", "High leverage", "Emotional trading", "News chasing"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "ash-advanced-6",
+  "lesson_id": "ash-advanced-6",
+  "title": "HOW TO TRADE MACRO 2026",
+  "video_url": "https://youtu.be/veVhwtlnlGM",
+  "videoUrl": "https://youtu.be/veVhwtlnlGM",
+  "description": "Macro trading execution framework for 2026",
+  "quiz": [
+    {
+      "question": "Macro timing focuses on:",
+      "options": ["Specific institutional time windows", "Indicators", "News only", "Volume only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Macro expansion usually occurs after:",
+      "options": ["Liquidity buildup", "Market close", "Random candles", "Spread freeze"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Trading macro without bias increases:",
+      "options": ["Risk", "Precision", "Accuracy", "Discipline"],
+      "correctIndex": 0
+    },
+    {
+      "question": "News + macro alignment increases:",
+      "options": ["Volatility", "Spread freeze", "Flat range", "Low liquidity"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Advanced macro trading requires:",
+      "options": ["Structured execution", "High leverage", "Random entries", "Emotional bias"],
+      "correctIndex": 0
+    }
+  ]
+}

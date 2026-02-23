@@ -1,64 +1,35 @@
 {
-  "title": "DAY 9 TS MODEL 1",
-  "description": "Building a trading model with defined entry, stop loss, and target rules.",
-  "videoUrl": "https://youtu.be/OQ6vlYS35bs",
-  "duration": "26 mins",
-  "content": "In this lesson, you'll learn:\n\n• Components of a trading model\n• Defining precise entry rules\n• Stop loss placement logic\n• Profit target calculation\n• Backtesting your model\n• Testing consistency and edge",
+  "id": "ash-beginner-23",
+  "lesson_id": "ash-beginner-23",
+  "title": "DAY 13 ORDERFLOW, HTF, LIQUIDITY",
+  "video_url": "https://youtu.be/yKgStMsTQow",
+  "videoUrl": "https://youtu.be/yKgStMsTQow",
+  "description": "Order flow analysis combined with higher timeframe and liquidity",
   "quiz": [
     {
-      "question": "A trading model must define:",
-      "options": [
-        "Entry",
-        "Stop Loss",
-        "Target",
-        "All of the above"
-      ],
-      "answer": 3,
-      "explanation": "A complete model specifies entry conditions, stop loss levels, and profit target rules."
+      "question": "Displacement indicates:",
+      "options": ["Institutional momentum", "Weak participation", "Flat range", "Spread freeze"],
+      "correctIndex": 0
     },
     {
-      "question": "Backtesting measures:",
-      "options": [
-        "Spread",
-        "Historical edge",
-        "News impact",
-        "Volume only"
-      ],
-      "answer": 1,
-      "explanation": "Backtesting reveals whether your model has an edge based on historical data."
+      "question": "Fair Value Gap forms due to:",
+      "options": ["Price inefficiency", "Equal highs", "Volume drop", "News halt"],
+      "correctIndex": 0
     },
     {
-      "question": "Risk per trade should be:",
-      "options": [
-        "Fixed %",
-        "Random",
-        "Increasing daily",
-        "Based on mood"
-      ],
-      "answer": 0,
-      "explanation": "Risk per trade must be fixed at a percentage to maintain consistency."
+      "question": "HTF liquidity acts as:",
+      "options": ["Major draw on price", "Minor level", "Indicator", "Random zone"],
+      "correctIndex": 0
     },
     {
-      "question": "A model fails when:",
-      "options": [
-        "Loss occurs",
-        "Rules are broken",
-        "Spread widens",
-        "News hits"
-      ],
-      "answer": 1,
-      "explanation": "A model fails when rules are violated, not when a single loss occurs."
+      "question": "Orderflow shift signals:",
+      "options": ["Momentum change", "Spread widening", "Indicator cross", "Flat session"],
+      "correctIndex": 0
     },
     {
-      "question": "System consistency depends on:",
-      "options": [
-        "Discipline",
-        "Indicators",
-        "News",
-        "Volume"
-      ],
-      "answer": 0,
-      "explanation": "Consistency requires discipline to follow the defined rules every single time."
+      "question": "Alignment between HTF and LTF improves:",
+      "options": ["Execution precision", "Emotional bias", "Risk exposure", "Random entries"],
+      "correctIndex": 0
     }
   ]
 }
