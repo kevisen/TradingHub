@@ -1,3 +1,5 @@
+import bundleData from './lessons.bundle';
+
 export type MCQ = {
   question: string;
   options: string[];
@@ -120,166 +122,32 @@ export async function initializeLessonsFromContent(): Promise<void> {
   }
 
   try {
-    // Try to load from content directory if running in Node.js environment
-    if (typeof window === "undefined") {
-      const fs = await import("fs").catch(() => null);
-      const path = await import("path").catch(() => null);
-
-      if (fs && path) {
-        const contentRoot = path.join(process.cwd(), "content");
-        for (const instructor of ["adarsh", "ash", "jean-mastan"]) {
-          for (const level of ["beginner", "intermediate", "advanced"]) {
-            try {
-              const levelPath = path.join(contentRoot, instructor, level);
-              if (fs.existsSync(levelPath)) {
-                const files = fs
-                  .readdirSync(levelPath)
-                  .filter((f: string) => f.endsWith(".json"))
-                  .sort((a, b) => {
-                    // Sort numerically by lesson number
-                    const numA = parseInt(a.match(/\d+/)?.[0] || "0");
-                    const numB = parseInt(b.match(/\d+/)?.[0] || "0");
-                    return numA - numB;
-                  });
-
-                for (const file of files) {
-                  try {
-                    const filePath = path.join(levelPath, file);
-                    const content = fs.readFileSync(filePath, "utf-8");
-                    const data = JSON.parse(content);
-                    const lesson = createSafeLesson(data);
-                    if (lesson) {
-                      lessons[instructor][level].push(lesson);
-                    }
-                  } catch (e) {
-                    console.warn(`Failed to load ${file}:`, e);
-                  }
-                }
-              }
-            } catch (e) {
-              console.warn(`Failed to read ${instructor}/${level}:`, e);
+    // PRODUCTION FIX: Load from imported bundle data (works in all environments: local + Vercel)
+    // The bundleData is an imported TypeScript module, not a filesystem read
+    // This ensures data is available at runtime in serverless environments
+    if (bundleData && typeof bundleData === 'object') {
+      try {
+        for (const instr of Object.keys(bundleData)) {
+          const instrData = bundleData[instr as keyof typeof bundleData];
+          if (!lessons[instr]) {
+            lessons[instr] = { beginner: [], intermediate: [], advanced: [], test: [] };
+          }
+          for (const lvl of Object.keys(instrData || {})) {
+            const levelLessons = instrData?.[lvl as keyof typeof instrData];
+            if (Array.isArray(levelLessons)) {
+              lessons[instr][lvl] = levelLessons
+                .map((d: any) => createSafeLesson(d))
+                .filter(Boolean) as Lesson[];
             }
           }
         }
-      }
-    }
-  } catch (error) {
-    console.warn("Content initialization completed with fallbacks:", error);
-  }
-
-  // If no lessons were loaded from content files, try to load a build-time
-  // bundle or the generated curriculum JSON (useful for serverless builds).
-  try {
-    const totalLessonsLoaded = Object.keys(lessons).reduce((sum, instr) => {
-      return (
-        sum +
-        Object.keys(lessons[instr]).reduce((s2, lvl) => s2 + lessons[instr][lvl].length, 0)
-      );
-    }, 0);
-
-    if (totalLessonsLoaded === 0 && typeof window === "undefined") {
-      const fs = await import("fs").catch(() => null);
-      const path = await import("path").catch(() => null);
-
-      if (fs && path) {
-        // Prefer a build-time generated bundle if present
-        const bundlePath = path.join(process.cwd(), "src", "data", "lessons.bundle.json");
-        const generatedPath = path.join(process.cwd(), "src", "data", "curriculum.generated.json");
-
-        let loaded = false;
-
-        try {
-          if (fs.existsSync(bundlePath)) {
-            const raw = fs.readFileSync(bundlePath, "utf-8");
-            const data = JSON.parse(raw);
-            for (const instr of Object.keys(data)) {
-              if (!lessons[instr]) {
-                lessons[instr] = { beginner: [], intermediate: [], advanced: [], test: [] };
-              }
-              const instrData = data[instr];
-              for (const lvl of Object.keys(instrData)) {
-                lessons[instr][lvl] = (instrData[lvl] || [])
-                  .map((d: any) => createSafeLesson(d))
-                  .filter(Boolean) as Lesson[];
-              }
-            }
-            loaded = true;
-          }
-        } catch (e) {
-          console.warn("Failed to load lessons.bundle.json:", e);
-        }
-
-        // Fallback to curriculum.generated.json if bundle wasn't present
-        if (!loaded) {
-          try {
-            if (fs.existsSync(generatedPath)) {
-              const raw = fs.readFileSync(generatedPath, "utf-8");
-              const data = JSON.parse(raw);
-              // curriculum.generated.json may have a different structure (nested arrays).
-              // Attempt to extract lessons when file contains an `instructors` array
-              if (data && Array.isArray(data.instructors)) {
-                console.warn("Detected generated curriculum (array format). Extracting lessons by difficulty.");
-
-                const byDifficulty: { [k: string]: Lesson[] } = {
-                  beginner: [],
-                  intermediate: [],
-                  advanced: []
-                };
-
-                for (const instrEntry of data.instructors || []) {
-                  for (const market of instrEntry.markets || []) {
-                    for (const strategy of market.strategies || []) {
-                      for (const phase of strategy.phases || []) {
-                        for (const l of phase.lessons || []) {
-                          try {
-                            const safe = createSafeLesson(l);
-                            if (!safe) continue;
-                            const diff = (l.difficulty || "beginner").toLowerCase();
-                            const key = diff.includes("inter") ? "intermediate" : diff.includes("adv") ? "advanced" : "beginner";
-                            byDifficulty[key].push(safe);
-                          } catch (e) {
-                            // ignore single lesson failures
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-
-                // Apply the extracted lessons to each known instructor slot so pages won't be empty
-                for (const instrKey of Object.keys(lessons)) {
-                  if (!lessons[instrKey]) {
-                    lessons[instrKey] = { beginner: [], intermediate: [], advanced: [], test: [] };
-                  }
-                  lessons[instrKey].beginner = deepClone(byDifficulty.beginner || []);
-                  lessons[instrKey].intermediate = deepClone(byDifficulty.intermediate || []);
-                  lessons[instrKey].advanced = deepClone(byDifficulty.advanced || []);
-                }
-
-              } else {
-                // Best-effort: try to treat top-level keys as instructor buckets
-                for (const instr of Object.keys(data)) {
-                  const instrData = data[instr];
-                  if (!instrData) continue;
-                  if (!lessons[instr]) {
-                    lessons[instr] = { beginner: [], intermediate: [], advanced: [], test: [] };
-                  }
-                  for (const lvl of Object.keys(instrData)) {
-                    lessons[instr][lvl] = (instrData[lvl] || [])
-                      .map((d: any) => createSafeLesson(d))
-                      .filter(Boolean) as Lesson[];
-                  }
-                }
-              }
-            }
-          } catch (e) {
-            console.warn("Failed to load curriculum.generated.json:", e);
-          }
-        }
+        console.log('Lessons loaded from imported bundle (Vercel-compatible)');
+      } catch (e) {
+        console.warn('Failed to load from bundleData:', e);
       }
     }
   } catch (e) {
-    console.warn("Bundle/curriculum fallback failed:", e);
+    console.warn('Bundle/curriculum fallback failed:', e);
   }
 
   // Apply fallbacks for empty levels

@@ -1,5 +1,10 @@
 import { getLessonsForInstructor, initializeLessonsFromContent } from '@/data/lessons';
 
+// PRODUCTION FIX: Force dynamic rendering to ensure data is fetched fresh
+// This prevents static generation from caching empty results in Vercel
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const instructor = searchParams.get('instructor');
