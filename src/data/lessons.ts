@@ -167,6 +167,79 @@ export async function initializeLessonsFromContent(): Promise<void> {
     console.warn("Content initialization completed with fallbacks:", error);
   }
 
+  // If no lessons were loaded from content files, try to load a build-time
+  // bundle or the generated curriculum JSON (useful for serverless builds).
+  try {
+    const totalLessonsLoaded = Object.keys(lessons).reduce((sum, instr) => {
+      return (
+        sum +
+        Object.keys(lessons[instr]).reduce((s2, lvl) => s2 + lessons[instr][lvl].length, 0)
+      );
+    }, 0);
+
+    if (totalLessonsLoaded === 0 && typeof window === "undefined") {
+      const fs = await import("fs").catch(() => null);
+      const path = await import("path").catch(() => null);
+
+      if (fs && path) {
+        // Prefer a build-time generated bundle if present
+        const bundlePath = path.join(process.cwd(), "src", "data", "lessons.bundle.json");
+        const generatedPath = path.join(process.cwd(), "src", "data", "curriculum.generated.json");
+
+        let loaded = false;
+
+        try {
+          if (fs.existsSync(bundlePath)) {
+            const raw = fs.readFileSync(bundlePath, "utf-8");
+            const data = JSON.parse(raw);
+            for (const instr of Object.keys(data)) {
+              if (!lessons[instr]) {
+                lessons[instr] = { beginner: [], intermediate: [], advanced: [], test: [] };
+              }
+              const instrData = data[instr];
+              for (const lvl of Object.keys(instrData)) {
+                lessons[instr][lvl] = (instrData[lvl] || [])
+                  .map((d: any) => createSafeLesson(d))
+                  .filter(Boolean) as Lesson[];
+              }
+            }
+            loaded = true;
+          }
+        } catch (e) {
+          console.warn("Failed to load lessons.bundle.json:", e);
+        }
+
+        // Fallback to curriculum.generated.json if bundle wasn't present
+        if (!loaded) {
+          try {
+            if (fs.existsSync(generatedPath)) {
+              const raw = fs.readFileSync(generatedPath, "utf-8");
+              const data = JSON.parse(raw);
+              // curriculum.generated.json may have a different structure; try to extract lessons
+              // It often contains a mapping under instructors or similar; attempt a best-effort merge
+              for (const instr of Object.keys(data)) {
+                const instrData = data[instr];
+                if (!instrData) continue;
+                if (!lessons[instr]) {
+                  lessons[instr] = { beginner: [], intermediate: [], advanced: [], test: [] };
+                }
+                for (const lvl of Object.keys(instrData)) {
+                  lessons[instr][lvl] = (instrData[lvl] || [])
+                    .map((d: any) => createSafeLesson(d))
+                    .filter(Boolean) as Lesson[];
+                }
+              }
+            }
+          } catch (e) {
+            console.warn("Failed to load curriculum.generated.json:", e);
+          }
+        }
+      }
+    }
+  } catch (e) {
+    console.warn("Bundle/curriculum fallback failed:", e);
+  }
+
   // Apply fallbacks for empty levels
   applyFallbackContent();
 
