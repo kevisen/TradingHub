@@ -1,6 +1,9 @@
-'use client';
+"use client";
 
 import { motion } from 'framer-motion';
+import { useState, useCallback } from 'react';
+import Lightbox from '@/components/Lightbox';
+import SnakeGame from '@/components/SnakeGame';
 import { InstructorCard } from '@/components/InstructorCard';
 import { ChevronRight, Upload } from 'lucide-react';
 
@@ -71,6 +74,19 @@ const markets = [
 ];
 
 export default function Home() {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const images = [
+    { src: '/visuals/candlestick.webp', alt: 'Candlestick patterns' },
+    { src: '/visuals/marketstructure.webp', alt: 'Market structure diagrams' },
+    { src: '/visuals/breakofstructure.webp', alt: 'Break of structure examples' },
+    { src: '/visuals/liquiditysweep.webp', alt: 'Liquidity sweeps' },
+    { src: '/visuals/orderblock.webp', alt: 'Order blocks' },
+  ];
+
+  const openLightboxAt = useCallback((idx: number) => setLightboxIndex(idx), []);
+  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       {/* HERO SECTION */}
@@ -102,18 +118,10 @@ export default function Home() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <motion.a
-                href="#learning-path"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="button-primary-glow px-10 py-4 rounded-lg font-bold text-lg"
-              >
-                Enter The Bootcamp
-              </motion.a>
-              <motion.a
                 href="#instructors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="button-secondary-glow px-10 py-4 rounded-lg font-bold text-lg"
+                className="button-primary-glow px-10 py-4 rounded-lg font-bold text-lg"
               >
                 Meet The Instructors
               </motion.a>
@@ -122,58 +130,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LEARNING PATH SECTION */}
-      <section id="learning-path" className="relative py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold">Your Learning Path</h2>
-          </motion.div>
+      {lightboxIndex !== null && (
+        <Lightbox images={images} initialIndex={lightboxIndex} onClose={closeLightbox} />
+      )}
 
-          {/* Learning Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {learningPath.map((item, idx) => (
-              <motion.div
-                key={item.level}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-                className="group"
-              >
-                <div className="relative h-full rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-8 overflow-hidden transition-all duration-300 group-hover:border-purple-400/50 group-hover:bg-white/10">
-                  {/* Glow on hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                    style={{
-                      background: 'radial-gradient(circle at center, rgba(147, 51, 234, 0.15) 0%, transparent 70%)',
-                    }}>
-                  </div>
-
-                  {/* Content */}
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-bold mb-2">{item.level}</h3>
-                    <p className="text-gray-400 text-sm mb-6">{item.subtitle}</p>
-                    <ul className="space-y-3">
-                      {item.points.map((point) => (
-                        <li key={point} className="flex items-start gap-3 text-gray-300">
-                          <span className="text-purple-400 font-bold mt-1">▪</span>
-                          <span className="text-sm">{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* LEARNING PATH SECTION removed per request */}
 
       {/* INSTRUCTORS SECTION */}
       <section id="instructors" className="relative py-24 px-4">
@@ -224,46 +185,62 @@ export default function Home() {
           {/* Image Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              'Candlestick patterns',
-              'Market structure diagrams',
-              'Break of structure examples',
-              'Liquidity sweeps',
-              'Order blocks',
-              'Risk management charts',
-            ].map((label, idx) => (
+              { label: 'Candlestick patterns', src: '/visuals/candlestick.webp' },
+              { label: 'Market structure diagrams', src: '/visuals/marketstructure.webp' },
+              { label: 'Break of structure examples', src: '/visuals/breakofstructure.webp' },
+              { label: 'Liquidity sweeps', src: '/visuals/liquiditysweep.webp' },
+              { label: 'Order blocks', src: '/visuals/orderblock.webp' },
+            ].map((item, idx) => (
               <motion.div
-                key={label}
+                key={item.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 viewport={{ once: true }}
                 className="group relative"
               >
-                <div className="relative h-64 rounded-xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md group-hover:border-purple-400/50 transition-all duration-300">
-                  {/* Image placeholder with gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-purple-950/50"></div>
+                <div
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openLightboxAt(idx)}
+                  onKeyDown={(e) => e.key === 'Enter' && openLightboxAt(idx)}
+                  className="relative h-64 rounded-xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md group-hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
+                >
+                  <img src={item.src} alt={item.label} className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  {/* Glow on hover */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{
                       background: 'radial-gradient(circle at center, rgba(147, 51, 234, 0.2) 0%, transparent 70%)',
                     }}>
                   </div>
 
-                  {/* Upload icon */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center z-10 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
-                    <Upload className="w-12 h-12 text-purple-400 mb-3" />
-                    <span className="text-sm text-gray-300">Click to upload</span>
-                  </div>
-
-                  {/* Caption overlay */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 z-20">
-                    <p className="text-sm font-semibold text-gray-200">{label}</p>
+                    <p className="text-sm font-semibold text-gray-200">{item.label}</p>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
+
+          {/* Lightbox state and rendering */}
+          
+        </div>
+      </section>
+
+      {/* SNAKE GAME SECTION */}
+      <section id="snake-game" className="relative py-24 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold">Play: Snake</h2>
+            <p className="text-gray-400 mt-2 mb-6">A small in-page Snake game. Start and use arrow keys.</p>
+            <SnakeGame />
+          </motion.div>
         </div>
       </section>
 
