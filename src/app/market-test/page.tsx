@@ -7,6 +7,7 @@ import SwipeCard from '@/components/market-test/SwipeCard';
 import TimerCircle from '@/components/market-test/TimerCircle';
 import ResultScreen, { ResultData } from '@/components/market-test/ResultScreen';
 import Leaderboard from '@/components/market-test/Leaderboard';
+import GsapPageEffects from '@/components/animations/GsapPageEffects';
 
 import { createSession, Session } from '@/lib/adaptiveEngine';
 import { questionPool, MarketQuestion } from '@/lib/questionPool';
@@ -110,14 +111,22 @@ export default function MarketTestPage() {
     window.location.href = '/instructor/adarsh/beginner/adarsh-beginner-1';
   };
 
+  const marketState = result
+    ? (result.percentage >= 70 ? 'bullish' : 'bearish')
+    : currentStreak >= 3
+      ? 'bullish'
+      : 'neutral';
+
   return (
-    <div
+    <GsapPageEffects
+      marketState={marketState}
+      streak={currentStreak}
       className={`min-h-screen bg-black text-white flex flex-col items-center justify-center p-4 ${
         currentStreak >= 3 ? 'pulse-bg' : ''
       } ${shake ? 'shake' : ''}`}
     >
       {!result && currentQuestion && (
-        <div className="flex flex-col items-center gap-6 w-full">
+        <div data-gsap-reveal className="flex flex-col items-center gap-6 w-full">
           {/* instruction / heading */}
           <h3 className="text-xl font-semibold mb-2">
             Swipe instinctively – yes or no.
@@ -143,7 +152,7 @@ export default function MarketTestPage() {
       )}
 
       {result && (
-        <div className="w-full max-w-xl">
+        <div data-gsap-reveal className="w-full max-w-xl">
           <ResultScreen
             data={result}
             onRetake={onRetake}
@@ -168,14 +177,15 @@ export default function MarketTestPage() {
       )}
 
       {/* persistent back button */}
-      <div className="mt-10">
+      <div data-gsap-reveal className="mt-10">
         <a
           href="/"
+          data-gsap-button
           className="text-purple-300 underline text-sm"
         >
           Back to Home
         </a>
       </div>
-    </div>
+    </GsapPageEffects>
   );
 }

@@ -3,7 +3,12 @@
 import { motion } from 'framer-motion';
 import { useState, useCallback } from 'react';
 import Lightbox from '@/components/Lightbox';
-import SnakeGame from '@/components/SnakeGame';
+import GsapPageEffects from '@/components/animations/GsapPageEffects';
+import {
+  PositionSizeGame,
+  RiskRewardGame,
+  TrendSnapGame,
+} from '@/components/chill-zone/TradingMiniGames';
 import { InstructorCard } from '@/components/InstructorCard';
 import { ChevronRight, Upload } from 'lucide-react';
 
@@ -88,9 +93,9 @@ export default function Home() {
   const closeLightbox = useCallback(() => setLightboxIndex(null), []);
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <GsapPageEffects marketState="neutral" streak={2} className="min-h-screen bg-black text-white overflow-hidden">
       {/* HERO SECTION */}
-      <section className="hero-section relative min-h-screen flex items-center justify-center pt-20 pb-20 px-4">
+      <section data-gsap-reveal className="hero-section relative min-h-screen flex items-center justify-center pt-20 pb-20 px-4">
         {/* Hero Content */}
         <div className="relative z-10 w-full max-w-4xl mx-auto text-center">
           <motion.div
@@ -101,18 +106,13 @@ export default function Home() {
           >
             {/* Main Headline */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Structured Trading Education.
-              <span className="block">Built for Real Progress.</span>
+              Mauritian pas mandiant li,
+              <span className="block">Apran trade la</span>
             </h1>
 
             {/* Subheading */}
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
               A complete bootcamp designed to develop technical precision, risk discipline, and market awareness across all major financial markets.
-            </p>
-
-            {/* Supporting Line */}
-            <p className="text-sm md:text-base text-gray-400">
-              No registration barriers. No distractions. Just education.
             </p>
 
             {/* CTA Buttons */}
@@ -121,6 +121,7 @@ export default function Home() {
                 href="#instructors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                data-gsap-button
                 className="button-primary-glow px-10 py-4 rounded-lg font-bold text-lg"
               >
                 Meet The Instructors
@@ -137,7 +138,7 @@ export default function Home() {
       {/* LEARNING PATH SECTION removed per request */}
 
       {/* INSTRUCTORS SECTION */}
-      <section id="instructors" className="relative py-24 px-4">
+      <section id="instructors" data-gsap-reveal className="relative py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -150,10 +151,11 @@ export default function Home() {
           </motion.div>
 
           {/* Instructor Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div data-gsap-stagger className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {instructors.map((instructor, idx) => (
               <motion.div
                 key={instructor.id}
+                data-gsap-stagger-item
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
@@ -167,7 +169,7 @@ export default function Home() {
       </section>
 
       {/* VISUAL LEARNING SECTION */}
-      <section className="relative py-24 px-4">
+      <section data-gsap-reveal className="relative py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -183,7 +185,7 @@ export default function Home() {
           </motion.div>
 
           {/* Image Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div data-gsap-stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { label: 'Candlestick patterns', src: '/visuals/candlestick.webp' },
               { label: 'Market structure diagrams', src: '/visuals/marketstructure.webp' },
@@ -193,6 +195,7 @@ export default function Home() {
             ].map((item, idx) => (
               <motion.div
                 key={item.label}
+                data-gsap-stagger-item
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
@@ -204,11 +207,11 @@ export default function Home() {
                   tabIndex={0}
                   onClick={() => openLightboxAt(idx)}
                   onKeyDown={(e) => e.key === 'Enter' && openLightboxAt(idx)}
-                  className="relative h-64 rounded-xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md group-hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
+                  className="tilt-card relative h-64 rounded-xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md group-hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
                 >
                   <img src={item.src} alt={item.label} className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  <div data-tilt-glow className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{
                       background: 'radial-gradient(circle at center, rgba(147, 51, 234, 0.2) 0%, transparent 70%)',
                     }}>
@@ -228,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* MARKET TEST CTA SECTION */}
-      <section className="relative py-24 px-4 bg-black">
+      <section data-gsap-reveal className="relative py-24 px-4 bg-black">
         <div className="max-w-6xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -247,6 +250,7 @@ export default function Home() {
               href="/market-test"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              data-gsap-button
               className="button-primary-glow px-10 py-4 rounded-lg font-bold text-lg"
             >
               Find your babe
@@ -256,7 +260,7 @@ export default function Home() {
       </section>
 
       {/* CHILL ZONE - MINI GAMES SECTION */}
-      <section id="mini-games" className="relative py-24 px-4">
+      <section id="mini-games" data-gsap-reveal className="loop-grid-34 relative py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -267,80 +271,83 @@ export default function Home() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Chill Zone – Mini Games</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Take a break between lessons and sharpen your instincts with quick, fun challenges.
+              Train your trading instincts with short simulation games between lessons.
             </p>
           </motion.div>
 
           {/* Mini Games Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Game 1: Snake */}
+          <div data-gsap-stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Game 1: Trend Snap */}
             <motion.div
+              data-gsap-stagger-item
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0 }}
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6 overflow-hidden transition-all duration-300 group-hover:border-purple-400/50 group-hover:bg-white/10">
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+              <div className="tilt-card relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6 overflow-hidden transition-all duration-300 group-hover:border-purple-400/50 group-hover:bg-white/10">
+                <div data-tilt-glow className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
                     background: 'radial-gradient(circle at center, rgba(147, 51, 234, 0.15) 0%, transparent 70%)',
                   }}>
                 </div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-2">🐍 Snake</h3>
-                  <p className="text-gray-400 text-sm mb-4">Navigate and survive. Use arrow keys.</p>
+                  <h3 className="text-2xl font-bold mb-2">📈 Trend Snap</h3>
+                  <p className="text-gray-400 text-sm mb-4">Read candle momentum and call long or short fast.</p>
                   <div className="bg-black/40 rounded-lg p-4">
-                    <SnakeGame />
+                    <TrendSnapGame />
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Game 2: Trading Reflex */}
+            {/* Game 2: Risk Reward */}
             <motion.div
+              data-gsap-stagger-item
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6 overflow-hidden transition-all duration-300 group-hover:border-purple-400/50 group-hover:bg-white/10">
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+              <div className="tilt-card relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6 overflow-hidden transition-all duration-300 group-hover:border-purple-400/50 group-hover:bg-white/10">
+                <div data-tilt-glow className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
                     background: 'radial-gradient(circle at center, rgba(147, 51, 234, 0.15) 0%, transparent 70%)',
                   }}>
                 </div>
                 <div className="relative z-10 text-center">
-                  <h3 className="text-2xl font-bold mb-2">📊 Quick Call</h3>
-                  <p className="text-gray-400 text-sm mb-4">Identify uptrends vs downtrends in seconds.</p>
-                  <button className="button-secondary-glow px-6 py-2 text-sm">
-                    Play Now
-                  </button>
+                  <h3 className="text-2xl font-bold mb-2">⚖️ Risk-Reward Match</h3>
+                  <p className="text-gray-400 text-sm mb-4">Find the correct R:R from entry, stop, and target.</p>
+                  <div className="bg-black/40 rounded-lg p-4">
+                    <RiskRewardGame />
+                  </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Game 3: Risk Calc */}
+            {/* Game 3: Position Size */}
             <motion.div
+              data-gsap-stagger-item
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6 overflow-hidden transition-all duration-300 group-hover:border-purple-400/50 group-hover:bg-white/10">
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+              <div className="tilt-card relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6 overflow-hidden transition-all duration-300 group-hover:border-purple-400/50 group-hover:bg-white/10">
+                <div data-tilt-glow className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
                     background: 'radial-gradient(circle at center, rgba(147, 51, 234, 0.15) 0%, transparent 70%)',
                   }}>
                 </div>
                 <div className="relative z-10 text-center">
-                  <h3 className="text-2xl font-bold mb-2">⚖️ Risk Puzzle</h3>
-                  <p className="text-gray-400 text-sm mb-4">Master position sizing and risk management puzzles.</p>
-                  <button className="button-secondary-glow px-6 py-2 text-sm">
-                    Play Now
-                  </button>
+                  <h3 className="text-2xl font-bold mb-2">💼 Position Size Quiz</h3>
+                  <p className="text-gray-400 text-sm mb-4">Practice fixed-percent risk sizing like a pro.</p>
+                  <div className="bg-black/40 rounded-lg p-4">
+                    <PositionSizeGame />
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -349,7 +356,7 @@ export default function Home() {
       </section>
 
       {/* MARKET TYPES SECTION */}
-      <section className="relative py-24 px-4">
+      <section data-gsap-reveal className="relative py-24 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -362,19 +369,20 @@ export default function Home() {
           </motion.div>
 
           {/* Markets Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div data-gsap-stagger className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {markets.map((market, idx) => (
               <motion.div
                 key={market.name}
+                data-gsap-stagger-item
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-8 overflow-hidden transition-all duration-300 group-hover:border-purple-400/50 group-hover:bg-white/10">
+                <div className="tilt-card relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-8 overflow-hidden transition-all duration-300 group-hover:border-purple-400/50 group-hover:bg-white/10">
                   {/* Glow on hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  <div data-tilt-glow className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                     style={{
                       background: 'radial-gradient(circle at center, rgba(147, 51, 234, 0.15) 0%, transparent 70%)',
                     }}>
@@ -418,7 +426,7 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className="relative py-24 px-4">
+      <section data-gsap-reveal className="relative py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -437,6 +445,7 @@ export default function Home() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              data-gsap-button
               className="button-cta-glow px-10 py-4 rounded-lg font-bold text-lg inline-block"
             >
               Join Our Discord
@@ -446,13 +455,13 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="relative border-t border-white/10 bg-black/50 backdrop-blur mt-24">
+      <footer data-gsap-reveal className="relative border-t border-white/10 bg-black/50 backdrop-blur mt-24">
         <div className="max-w-6xl mx-auto px-4 py-12 text-center text-gray-500 text-sm">
           <p>
             © 2024 Trading Bootcamp. All rights reserved. | No registration. No database. Pure learning.
           </p>
         </div>
       </footer>
-    </div>
+    </GsapPageEffects>
   );
 }

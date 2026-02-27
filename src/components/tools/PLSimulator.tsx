@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
+import DragInteractionShell from '@/components/animations/DragInteractionShell'
+import PnlPulseValue from '@/components/animations/PnlPulseValue'
 
 function generateEquity(start: number, trades: number, winRate: number, avgR: number, stdDev: number) {
   const equity = [start]
@@ -21,6 +23,11 @@ export default function PLSimulator() {
   const [stdDev, setStdDev] = useState<string>('0.5')
 
   const data = generateEquity(parseFloat(start) || 0, parseInt(trades) || 0, parseFloat(winRate) || 0, parseFloat(avgR) || 0, parseFloat(stdDev) || 0)
+  const startCapital = parseFloat(start) || 0
+  const lastValue = data.length ? data[data.length - 1].value : 0
+  const pnlValue = +(lastValue - startCapital).toFixed(2)
+  const pnlSign = pnlValue >= 0 ? '+' : ''
+  const pnlClass = pnlValue >= 0 ? 'text-green-300' : 'text-red-300'
 
   return (
     <div className="space-y-3">
@@ -32,17 +39,26 @@ export default function PLSimulator() {
         <input className="p-2 bg-panel border border-border rounded" value={stdDev} onChange={(e) => setStdDev(e.target.value)} />
       </div>
 
-      <div className="h-64 border border-border rounded p-2 bg-panel">
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data}>
-            <CartesianGrid stroke="#2A3441" />
-            <XAxis dataKey="index" stroke="#94A3B8" />
-            <YAxis stroke="#94A3B8" />
-            <Tooltip />
-            <Line type="monotone" dataKey="value" stroke="#3B82F6" strokeWidth={2} dot={false} />
-          </LineChart>
-        </ResponsiveContainer>
+      <div className="flex items-center justify-between text-sm text-secondaryText px-1">
+        <span>PnL</span>
+        <PnlPulseValue value={pnlValue} className={`font-semibold ${pnlClass}`}>
+          {pnlSign}${Math.abs(pnlValue).toFixed(2)}
+        </PnlPulseValue>
       </div>
+
+      <DragInteractionShell className="rounded">
+        <div className="h-64 border border-border rounded p-2 bg-panel" data-drag-ui>
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={data}>
+              <CartesianGrid stroke="#2A3441" />
+              <XAxis dataKey="index" stroke="#94A3B8" />
+              <YAxis stroke="#94A3B8" />
+              <Tooltip />
+              <Line type="monotone" dataKey="value" stroke="#3B82F6" strokeWidth={2} dot={false} />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      </DragInteractionShell>
     </div>
   )
 }

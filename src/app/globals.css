@@ -7,6 +7,21 @@
   --foreground: 0 0% 3.6%;
 }
 
+html,
+body {
+  cursor: none;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+[role='button'],
+.cursor-none {
+  cursor: none !important;
+}
+
 /* Global scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
@@ -47,6 +62,7 @@
   h4,
   h5,
   h6 {
+    font-family: 'Audiowide', system-ui;
     @apply font-semibold;
   }
 
@@ -69,7 +85,7 @@
 }
 
 @layer components {
-  /* Grid Background Pattern (24px x 24px) using linear gradients */
+  /* Grid Background Pattern (34px x 34px) using linear gradients */
   .hero-section {
     background: linear-gradient(
         90deg,
@@ -80,7 +96,21 @@
         rgba(255, 255, 255, 0.05) 1px,
         transparent 1px
       );
-    background-size: 24px 24px;
+    background-size: 34px 34px;
+    background-color: transparent;
+  }
+
+  .loop-grid-34 {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px
+      );
+    background-size: 34px 34px;
     background-color: transparent;
   }
 

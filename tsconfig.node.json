@@ -6,5 +6,6 @@
     "lib": ["esnext"],
     "skipLibCheck": true,
     "strict": false
-  }
+  },
+  "include": ["vite.config.ts"]
 }

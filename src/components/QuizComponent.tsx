@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quiz } from '@/lib/types';
 import { CheckCircle2, XCircle } from 'lucide-react';
+import { getRandomGif } from '@/lib/gifPool';
 
 interface QuizComponentProps {
   quiz: Quiz[];
@@ -19,6 +20,10 @@ export function QuizComponent({ quiz, onComplete, batchMode = false }: QuizCompo
   const [completed, setCompleted] = useState(false);
   const [batchAnswers, setBatchAnswers] = useState<(number | null)[]>([]);
   const [gifFailed, setGifFailed] = useState(false);
+  const [resultGif, setResultGif] = useState<string>('');
+
+  const percentage = Math.round((score / quiz.length) * 100);
+  const passed = percentage >= 80;
 
   useEffect(() => {
     if (batchMode) {
@@ -26,20 +31,17 @@ export function QuizComponent({ quiz, onComplete, batchMode = false }: QuizCompo
     }
   }, [batchMode, quiz.length]);
 
+  useEffect(() => {
+    if (!completed) return;
+    setGifFailed(false);
+    setResultGif(getRandomGif(passed));
+  }, [completed, passed]);
+
   if (!quiz || quiz.length === 0) {
     return null;
   }
 
-    if (completed) {
-    const percentage = Math.round((score / quiz.length) * 100);
-    const passed = percentage >= 80;
-
-    // swapped as requested: fail -> first URL, pass -> second URL
-    const failGifPage = 'https://tenor.com/view/donald-trump-wrong-not-right-gif-14695153867752834726';
-    const passGifPage = 'https://tenor.com/view/trump-trump-2024-maga-the-donald-donald-trump-gif-5733371666398431239';
-    const passGif = `${passGifPage}.gif`;
-    const failGif = `${failGifPage}.gif`;
-
+  if (completed) {
     return (
       <motion.div
         initial={{ opacity: 0 }}
@@ -49,10 +51,14 @@ export function QuizComponent({ quiz, onComplete, batchMode = false }: QuizCompo
         {passed ? (
           <>
             <div className="mx-auto mb-4 w-36 h-36">
-              {!gifFailed ? (
-                <img src={passGif} alt="Passed" className="w-full h-full object-cover rounded-md" onError={() => setGifFailed(true)} />
+              {!gifFailed && resultGif ? (
+                <img src={resultGif} alt="Passed" className="w-full h-full object-cover rounded-md" onError={() => setGifFailed(true)} />
+              ) : !resultGif ? (
+                <div className="w-full h-full rounded-md bg-black/30 border border-white/10 flex items-center justify-center text-sm text-gray-300">
+                  Loading GIF...
+                </div>
               ) : (
-                <a href={passGifPage} target="_blank" rel="noreferrer" className="text-blue-400 underline">Open GIF</a>
+                <span className="text-gray-300">GIF unavailable</span>
               )}
             </div>
             <h3 className="text-2xl font-bold text-gray-50 mb-2">Great Job!</h3>
@@ -62,10 +68,14 @@ export function QuizComponent({ quiz, onComplete, batchMode = false }: QuizCompo
         ) : (
           <>
             <div className="mx-auto mb-4 w-36 h-36">
-              {!gifFailed ? (
-                <img src={failGif} alt="Failed" className="w-full h-full object-cover rounded-md" onError={() => setGifFailed(true)} />
+              {!gifFailed && resultGif ? (
+                <img src={resultGif} alt="Failed" className="w-full h-full object-cover rounded-md" onError={() => setGifFailed(true)} />
+              ) : !resultGif ? (
+                <div className="w-full h-full rounded-md bg-black/30 border border-white/10 flex items-center justify-center text-sm text-gray-300">
+                  Loading GIF...
+                </div>
               ) : (
-                <a href={failGifPage} target="_blank" rel="noreferrer" className="text-blue-400 underline">Open GIF</a>
+                <span className="text-gray-300">GIF unavailable</span>
               )}
             </div>
             <h3 className="text-2xl font-bold text-gray-50 mb-2">Try Again</h3>
@@ -77,6 +87,7 @@ export function QuizComponent({ quiz, onComplete, batchMode = false }: QuizCompo
               setAnswered(false);
               setCompleted(false);
               setBatchAnswers(Array(quiz.length).fill(null));
+              setResultGif('');
             }} className="button-primary">Retake Quiz</button>
           </>
         )}
