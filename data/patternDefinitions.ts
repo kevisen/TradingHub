@@ -1,0 +1,77 @@
+export const patternDefinitions = {
+  doji: {
+    name: 'Doji',
+    type: 'Indecision',
+    bias: 'Neutral',
+    description: 'Open and close are nearly equal. Market hesitation.',
+    hint: 'Wait for next candle confirmation.',
+    shortTerm: 'Potential reversal if near key level.',
+  },
+  hammer: {
+    name: 'Hammer',
+    type: 'Bullish Reversal',
+    bias: 'Bullish',
+    description: 'Small body with long lower wick.',
+    hint: 'Strong rejection from support.',
+    shortTerm: 'Look for upside continuation.',
+  },
+  shooting_star: {
+    name: 'Shooting Star',
+    type: 'Bearish Reversal',
+    bias: 'Bearish',
+    description: 'Small body with long upper wick.',
+    hint: 'Strong rejection from resistance.',
+    shortTerm: 'Watch for downside move.',
+  },
+  bullish_engulfing: {
+    name: 'Bullish Engulfing',
+    type: 'Bullish Reversal',
+    bias: 'Bullish',
+    description: 'Large bullish candle fully engulfs previous bearish.',
+    hint: 'Buyers gained full control.',
+    shortTerm: 'Strong upward probability.',
+  },
+  bearish_engulfing: {
+    name: 'Bearish Engulfing',
+    type: 'Bearish Reversal',
+    bias: 'Bearish',
+    description: 'Large bearish candle fully engulfs previous bullish.',
+    hint: 'Sellers overwhelmed buyers.',
+    shortTerm: 'High chance of drop.',
+  },
+  morning_star: {
+    name: 'Morning Star',
+    type: 'Bullish Reversal',
+    bias: 'Bullish',
+    description: 'Three-candle reversal: strong bearish, small indecision, then strong bullish recovery.',
+    hint: 'Momentum shifts from sellers to buyers.',
+    shortTerm: 'Potential upside follow-through.',
+  },
+  evening_star: {
+    name: 'Evening Star',
+    type: 'Bearish Reversal',
+    bias: 'Bearish',
+    description: 'Three-candle reversal: strong bullish, small indecision, then strong bearish breakdown.',
+    hint: 'Momentum shifts from buyers to sellers.',
+    shortTerm: 'Potential downside continuation.',
+  },
+  three_white_soldiers: {
+    name: 'Three White Soldiers',
+    type: 'Bullish Continuation',
+    bias: 'Bullish',
+    description: 'Three consecutive bullish candles with progressively higher closes.',
+    hint: 'Sustained buyer control across sessions.',
+    shortTerm: 'Trend strength may continue upward.',
+  },
+  three_black_crows: {
+    name: 'Three Black Crows',
+    type: 'Bearish Continuation',
+    bias: 'Bearish',
+    description: 'Three consecutive bearish candles with progressively lower closes.',
+    hint: 'Sustained seller control across sessions.',
+    shortTerm: 'Trend weakness may continue downward.',
+  },
+}
+
+export type PatternKey = keyof typeof patternDefinitions
+export type PatternDefinition = (typeof patternDefinitions)[PatternKey]

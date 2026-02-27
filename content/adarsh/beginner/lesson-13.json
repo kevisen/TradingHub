@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-13",
+  "lesson_id": "adarsh-beginner-13",
+  "title": "Candlestick",
+  "video_url": "https://youtu.be/H_FpKZu9Lmg?si=MA6MEOHi_wvI18Aa",
+  "videoUrl": "https://youtu.be/H_FpKZu9Lmg?si=MA6MEOHi_wvI18Aa",
+  "description": "Candlestick basics and how to read price movement.",
+  "quiz": [
+    {
+      "question": "A candlestick chart is used to show:",
+      "options": ["Weather patterns", "Price movement", "Sports scores", "Movie ratings"],
+      "correctIndex": 1
+    },
+    {
+      "question": "The body of a candlestick represents:",
+      "options": ["News events", "Opening and closing price", "Broker fees", "Market hours"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A green (bullish) candle means:",
+      "options": ["Price went down", "Price stayed same", "Closing higher than open", "No change"],
+      "correctIndex": 2
+    },
+    {
+      "question": "The upper wick of a candle shows:",
+      "options": ["Highest price reached", "Lowest price", "Broker spread", "Trading time"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Candlestick patterns help traders:",
+      "options": ["Guess direction", "Book flights", "Watch movies", "Close accounts"],
+      "correctIndex": 0
+    }
+  ]
+}

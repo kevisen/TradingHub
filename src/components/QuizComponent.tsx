@@ -144,7 +144,8 @@ export function QuizComponent({ quiz, onComplete, batchMode = false }: QuizCompo
 
     let s = 0;
     for (let i = 0; i < quiz.length; i++) {
-      const ansIdx = (quiz[i] as any).answer ?? (quiz[i] as any).correctIndex;
+      const quizItem = quiz[i] as Quiz & { correctIndex?: number };
+      const ansIdx = quizItem.answer ?? quizItem.correctIndex;
       if (batchAnswers[i] === ansIdx) s++;
     }
     setScore(s);
@@ -160,7 +161,7 @@ export function QuizComponent({ quiz, onComplete, batchMode = false }: QuizCompo
         exit={{ opacity: 0, x: -20 }}
         className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-8 border border-gray-700"
       >
-        {/* If batchMode prop is passed via (quiz as any).batchMode, render all questions at once */}
+        {/* If batchMode prop is passed, render all questions at once */}
         {batchMode ? (
           <div>
             <div className="mb-6 flex justify-between items-center">
@@ -170,7 +171,8 @@ export function QuizComponent({ quiz, onComplete, batchMode = false }: QuizCompo
 
             <div className="space-y-6">
               {quiz.map((q, qi) => {
-                const ansIdx = (q as any).answer ?? (q as any).correctIndex;
+                const quizItem = q as Quiz & { correctIndex?: number };
+                const ansIdx = quizItem.answer ?? quizItem.correctIndex;
                 const selected = batchAnswers[qi] ?? null;
 
                 return (

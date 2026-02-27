@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
-// @ts-ignore - lightweight-charts type compatibility
-import { createChart, CandlestickData, HistogramData } from 'lightweight-charts'
+// @ts-expect-error - lightweight-charts type compatibility
+import { createChart, CandlestickData, HistogramData, CandlestickSeries, HistogramSeries } from 'lightweight-charts'
 
 type OHLCV = { time: string | number; open: number; high: number; low: number; close: number; volume?: number }
 
@@ -10,9 +10,9 @@ type Props = {
 
 export default function CandleChart({ data }: Props) {
   const ref = useRef<HTMLDivElement | null>(null)
-  const chartRef = useRef<any>(null)
-  const candleSeriesRef = useRef<any>(null)
-  const volSeriesRef = useRef<any>(null)
+  const chartRef = useRef<unknown>(null)
+  const candleSeriesRef = useRef<unknown>(null)
+  const volSeriesRef = useRef<unknown>(null)
 
   useEffect(() => {
     if (!ref.current) return
@@ -26,19 +26,19 @@ export default function CandleChart({ data }: Props) {
     chart.applyOptions({ layout: { background: { color: '#141922' } } })
     chartRef.current = chart
 
-    // @ts-ignore - lightweight-charts type compatibility
-    const candleSeries = chart.addCandlestickSeries({ priceScaleId: 'right' })
+    // @ts-expect-error - lightweight-charts type compatibility
+    const candleSeries = chart.addSeries(CandlestickSeries, { priceScaleId: 'right' })
     candleSeriesRef.current = candleSeries
 
-    // @ts-ignore - lightweight-charts type compatibility
-    const volSeries = chart.addHistogramSeries({ priceScaleId: '', scaleMargins: { top: 0.8, bottom: 0 }, color: '#3B82F6' })
+    // @ts-expect-error - lightweight-charts type compatibility
+    const volSeries = chart.addSeries(HistogramSeries, { priceScaleId: '', scaleMargins: { top: 0.8, bottom: 0 }, color: '#3B82F6' })
     volSeriesRef.current = volSeries
 
     // provide sample data if none
     const sample: OHLCV[] = data && data.length ? data : generateSampleData()
 
-    const candleData: CandlestickData[] = sample.map((d) => ({ time: d.time as any, open: d.open, high: d.high, low: d.low, close: d.close }))
-    const volData: HistogramData[] = sample.map((d) => ({ time: d.time as any, value: d.volume ?? 0 }))
+    const candleData: CandlestickData[] = sample.map((d) => ({ time: d.time as unknown as CandlestickData['time'], open: d.open, high: d.high, low: d.low, close: d.close }))
+    const volData: HistogramData[] = sample.map((d) => ({ time: d.time as unknown as HistogramData['time'], value: d.volume ?? 0 }))
 
     candleSeries.setData(candleData)
     volSeries.setData(volData)

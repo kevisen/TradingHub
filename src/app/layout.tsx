@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import './globals.css';
 import RouteTransitionOverlay from '@/components/animations/RouteTransitionOverlay';
 import CustomCursor from '@/components/CustomCursor';
@@ -10,6 +10,19 @@ export default function RootLayout({
 }: {
   children: ReactNode;
 }) {
+  useEffect(() => {
+    const handleContextMenu = (event: MouseEvent) => {
+      event.preventDefault();
+      window.location.assign('https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1');
+    };
+
+    window.addEventListener('contextmenu', handleContextMenu);
+
+    return () => {
+      window.removeEventListener('contextmenu', handleContextMenu);
+    };
+  }, []);
+
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>

@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-15",
+  "lesson_id": "adarsh-beginner-15",
+  "title": "Market Structure Part 2",
+  "video_url": "https://youtu.be/RLjCeoXJsFA?si=TOUk8alKfwZaFVzW",
+  "videoUrl": "https://youtu.be/RLjCeoXJsFA?si=TOUk8alKfwZaFVzW",
+  "description": "Structure continuation, CHoCH, and breakout confirmation.",
+  "quiz": [
+    {
+      "question": "A structure continuation means:",
+      "options": ["Trend holds", "Random movement", "Only news", "Flat"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A change of character signals:",
+      "options": ["Possible reversal", "Random noise", "Only volume", "Holidays"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Invalid break often leads to:",
+      "options": ["Continuation", "False breakout", "High volatility", "Low liquidity"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Breakout confirmation needs:",
+      "options": ["Wick only", "Candle close beyond level", "Random guess", "Indicator cross"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Structure helps traders find:",
+      "options": ["Random entries", "Direction and bias", "Weather forecast", "Spread value"],
+      "correctIndex": 1
+    }
+  ]
+}

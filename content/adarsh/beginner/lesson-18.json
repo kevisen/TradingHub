@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-18",
+  "lesson_id": "adarsh-beginner-18",
+  "title": "Liquidity Pools Part 2",
+  "video_url": "https://youtu.be/jb9razjA1IM?si=CJ8A5O604qoC9E9n",
+  "videoUrl": "https://youtu.be/jb9razjA1IM?si=CJ8A5O604qoC9E9n",
+  "description": "Secondary liquidity pockets, stop hunts, and execution context.",
+  "quiz": [
+    {
+      "question": "Secondary liquidity pockets form at:",
+      "options": ["Minor highs/lows", "Mid-chart", "Weekend only", "Random"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Stop hunts aim to:",
+      "options": ["Trigger orders", "Increase spread", "Close markets", "Change timezone"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Liquidity can be:",
+      "options": ["Deep or shallow", "Only deep", "Only shallow", "None"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Smart money uses liquidity to:",
+      "options": ["Create entry imbalance", "Randomize charts", "Reduce volatility", "Change brokers"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Traders avoid trading without:",
+      "options": ["Liquidity", "Noise", "Flat markets", "Indicators"],
+      "correctIndex": 0
+    }
+  ]
+}

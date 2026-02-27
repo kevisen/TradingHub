@@ -13,22 +13,23 @@ type ProgressState = {
 }
 
 const STORAGE_KEY = 'userProgress'
+const storedProgress = (getItem(STORAGE_KEY) as Partial<ProgressState>) ?? {}
 
 export const useUserProgressStore = create<ProgressState>((set, get) => ({
-  completedLessons: getItem(STORAGE_KEY)?.completedLessons ?? [],
-  timeSpentPerLesson: getItem(STORAGE_KEY)?.timeSpentPerLesson ?? {},
-  quizScores: getItem(STORAGE_KEY)?.quizScores ?? {},
-  weakTags: getItem(STORAGE_KEY)?.weakTags ?? {},
-  lastAccessedLesson: getItem(STORAGE_KEY)?.lastAccessedLesson,
+  completedLessons: storedProgress.completedLessons ?? [],
+  timeSpentPerLesson: storedProgress.timeSpentPerLesson ?? {},
+  quizScores: storedProgress.quizScores ?? {},
+  weakTags: storedProgress.weakTags ?? {},
+  lastAccessedLesson: storedProgress.lastAccessedLesson,
   markCompleted: (lessonId) => {
-    set((s: any) => {
+    set((s) => {
       const next = { ...s, completedLessons: Array.from(new Set([...s.completedLessons, lessonId])) }
       setItem(STORAGE_KEY, next)
       return next
     })
   },
   addTime: (lessonId, minutes) => {
-    set((s: any) => {
+    set((s) => {
       const nextTimes = { ...s.timeSpentPerLesson, [lessonId]: (s.timeSpentPerLesson[lessonId] || 0) + minutes }
       const next = { ...s, timeSpentPerLesson: nextTimes }
       setItem(STORAGE_KEY, next)
@@ -36,7 +37,7 @@ export const useUserProgressStore = create<ProgressState>((set, get) => ({
     })
   },
   setQuizScore: (lessonId, score) => {
-    set((s: any) => {
+    set((s) => {
       const nextScores = { ...s.quizScores, [lessonId]: score }
       const next = { ...s, quizScores: nextScores }
       setItem(STORAGE_KEY, next)

@@ -242,6 +242,426 @@
         ]
       },
       {
+        "id": "adarsh-beginner-13",
+        "lesson_id": "adarsh-beginner-13",
+        "title": "Candlestick",
+        "video_url": "https://youtu.be/H_FpKZu9Lmg?si=MA6MEOHi_wvI18Aa",
+        "videoUrl": "https://youtu.be/H_FpKZu9Lmg?si=MA6MEOHi_wvI18Aa",
+        "description": "Candlestick basics and how to read price movement.",
+        "quiz": [
+          {
+            "question": "A candlestick chart is used to show:",
+            "options": [
+              "Weather patterns",
+              "Price movement",
+              "Sports scores",
+              "Movie ratings"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "The body of a candlestick represents:",
+            "options": [
+              "News events",
+              "Opening and closing price",
+              "Broker fees",
+              "Market hours"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "A green (bullish) candle means:",
+            "options": [
+              "Price went down",
+              "Price stayed same",
+              "Closing higher than open",
+              "No change"
+            ],
+            "correctIndex": 2
+          },
+          {
+            "question": "The upper wick of a candle shows:",
+            "options": [
+              "Highest price reached",
+              "Lowest price",
+              "Broker spread",
+              "Trading time"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Candlestick patterns help traders:",
+            "options": [
+              "Guess direction",
+              "Book flights",
+              "Watch movies",
+              "Close accounts"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
+        "id": "adarsh-beginner-14",
+        "lesson_id": "adarsh-beginner-14",
+        "title": "Market Structure Part 1",
+        "video_url": "https://youtu.be/G9z7elC9fas?si=igsFAW-wn5Rq9PM9",
+        "videoUrl": "https://youtu.be/G9z7elC9fas?si=igsFAW-wn5Rq9PM9",
+        "description": "Trend direction, support, and resistance fundamentals.",
+        "quiz": [
+          {
+            "question": "Market structure shows:",
+            "options": [
+              "Weather",
+              "Trend direction",
+              "Random noise",
+              "Sports score"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "An uptrend is identified by:",
+            "options": [
+              "Lower highs",
+              "Higher highs and higher lows",
+              "Flat movement",
+              "Volume only"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "A downtrend forms when price makes:",
+            "options": [
+              "Higher highs",
+              "Lower lows",
+              "Equal highs",
+              "News spikes"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "Support is:",
+            "options": [
+              "Price ceiling",
+              "Price floor",
+              "Random",
+              "News event"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "Resistance refers to:",
+            "options": [
+              "Support",
+              "Price ceiling",
+              "Volume",
+              "Indicator"
+            ],
+            "correctIndex": 1
+          }
+        ]
+      },
+      {
+        "id": "adarsh-beginner-15",
+        "lesson_id": "adarsh-beginner-15",
+        "title": "Market Structure Part 2",
+        "video_url": "https://youtu.be/RLjCeoXJsFA?si=TOUk8alKfwZaFVzW",
+        "videoUrl": "https://youtu.be/RLjCeoXJsFA?si=TOUk8alKfwZaFVzW",
+        "description": "Structure continuation, CHoCH, and breakout confirmation.",
+        "quiz": [
+          {
+            "question": "A structure continuation means:",
+            "options": [
+              "Trend holds",
+              "Random movement",
+              "Only news",
+              "Flat"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "A change of character signals:",
+            "options": [
+              "Possible reversal",
+              "Random noise",
+              "Only volume",
+              "Holidays"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Invalid break often leads to:",
+            "options": [
+              "Continuation",
+              "False breakout",
+              "High volatility",
+              "Low liquidity"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "Breakout confirmation needs:",
+            "options": [
+              "Wick only",
+              "Candle close beyond level",
+              "Random guess",
+              "Indicator cross"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "Structure helps traders find:",
+            "options": [
+              "Random entries",
+              "Direction and bias",
+              "Weather forecast",
+              "Spread value"
+            ],
+            "correctIndex": 1
+          }
+        ]
+      },
+      {
+        "id": "adarsh-beginner-16",
+        "lesson_id": "adarsh-beginner-16",
+        "title": "POI (PD ARRAY)",
+        "video_url": "https://youtu.be/eljIBZWFj4E?si=EFb4hvyXWzSEEnwF",
+        "videoUrl": "https://youtu.be/eljIBZWFj4E?si=EFb4hvyXWzSEEnwF",
+        "description": "Points of Interest and PD Array context in price action.",
+        "quiz": [
+          {
+            "question": "POI stands for:",
+            "options": [
+              "Price of Interest",
+              "Point of Ignorance",
+              "Periodic Indicator",
+              "Profit on Investment"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "PD Array likely refers to:",
+            "options": [
+              "Price/Decision array",
+              "Weather forecast",
+              "Random table",
+              "Indicator only"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "A Point of Interest helps traders:",
+            "options": [
+              "Random entry",
+              "Important price areas",
+              "Broker fees",
+              "News timing"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "POI is used in:",
+            "options": [
+              "Charts for key zones",
+              "Word documents",
+              "Email",
+              "Videos"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "PD Array cluster helps:",
+            "options": [
+              "Orderflow context",
+              "Movie ratings",
+              "Game scores",
+              "Weather"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
+        "id": "adarsh-beginner-17",
+        "lesson_id": "adarsh-beginner-17",
+        "title": "Liquidity Pools Part 1",
+        "video_url": "https://youtu.be/wtZfrAB6698?si=aJk8paEJFlyi8YeX",
+        "videoUrl": "https://youtu.be/wtZfrAB6698?si=aJk8paEJFlyi8YeX",
+        "description": "Liquidity pools and how they shape market movement.",
+        "quiz": [
+          {
+            "question": "Liquidity pools are areas where:",
+            "options": [
+              "Water gathers",
+              "Market orders congregate",
+              "Brokers sleep",
+              "News events occur"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "Large stop orders create:",
+            "options": [
+              "Liquidity",
+              "Only noise",
+              "Flat charts",
+              "Weather patterns"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Traders seek liquidity for:",
+            "options": [
+              "Good entry/exit",
+              "Movies",
+              "Music",
+              "Random numbers"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Liquidity pools often sit near:",
+            "options": [
+              "Structural highs/lows",
+              "Random candle",
+              "Weekend only",
+              "Broker page"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Understanding liquidity helps traders:",
+            "options": [
+              "Find smarter entries",
+              "Weather data",
+              "Social media",
+              "Cooking"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
+        "id": "adarsh-beginner-18",
+        "lesson_id": "adarsh-beginner-18",
+        "title": "Liquidity Pools Part 2",
+        "video_url": "https://youtu.be/jb9razjA1IM?si=CJ8A5O604qoC9E9n",
+        "videoUrl": "https://youtu.be/jb9razjA1IM?si=CJ8A5O604qoC9E9n",
+        "description": "Secondary liquidity pockets, stop hunts, and execution context.",
+        "quiz": [
+          {
+            "question": "Secondary liquidity pockets form at:",
+            "options": [
+              "Minor highs/lows",
+              "Mid-chart",
+              "Weekend only",
+              "Random"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Stop hunts aim to:",
+            "options": [
+              "Trigger orders",
+              "Increase spread",
+              "Close markets",
+              "Change timezone"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Liquidity can be:",
+            "options": [
+              "Deep or shallow",
+              "Only deep",
+              "Only shallow",
+              "None"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Smart money uses liquidity to:",
+            "options": [
+              "Create entry imbalance",
+              "Randomize charts",
+              "Reduce volatility",
+              "Change brokers"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Traders avoid trading without:",
+            "options": [
+              "Liquidity",
+              "Noise",
+              "Flat markets",
+              "Indicators"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
+        "id": "adarsh-beginner-19",
+        "lesson_id": "adarsh-beginner-19",
+        "title": "CRT Part 1",
+        "video_url": "https://youtu.be/UyK6QmO-vPY?si=TOJ2SJl5g-JTzwSS",
+        "videoUrl": "https://youtu.be/UyK6QmO-vPY?si=TOJ2SJl5g-JTzwSS",
+        "description": "CRT foundations and reactions at structural levels.",
+        "quiz": [
+          {
+            "question": "CRT stands for:",
+            "options": [
+              "Chart Reaction Theory",
+              "Commodity Real Time",
+              "Currency Rates Table",
+              "Chart Range Tactic"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "CRT helps analyze:",
+            "options": [
+              "Market behaviour",
+              "Movies",
+              "Weather",
+              "Chat apps"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "CRT uses:",
+            "options": [
+              "Structural levels",
+              "Random values",
+              "Spread only",
+              "News only"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "A valid CRT reaction shows:",
+            "options": [
+              "False breakout",
+              "Candles reacting at key zone",
+              "Random move",
+              "Only news"
+            ],
+            "correctIndex": 1
+          },
+          {
+            "question": "CRT helps with:",
+            "options": [
+              "Entry & exit rules",
+              "Car driving",
+              "Game scores",
+              "Weather forecast"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
         "id": "adarsh-beginner-2",
         "lesson_id": "adarsh-beginner-2",
         "title": "Forex Foundation Part 2",
@@ -296,6 +716,66 @@
               "Baking recipes",
               "Foreign languages",
               "Poetry"
+            ],
+            "correctIndex": 0
+          }
+        ]
+      },
+      {
+        "id": "adarsh-beginner-20",
+        "lesson_id": "adarsh-beginner-20",
+        "title": "SMT",
+        "video_url": "https://youtu.be/o8txnKo80p8?si=759fVU4MWUNPrcTv",
+        "videoUrl": "https://youtu.be/o8txnKo80p8?si=759fVU4MWUNPrcTv",
+        "description": "Smart Money Theory and institutional behavior clues.",
+        "quiz": [
+          {
+            "question": "SMT stands for:",
+            "options": [
+              "Smart Money Theory",
+              "Simple Market Trend",
+              "Stock Market Trader",
+              "Spread Movement Tactic"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Smart Money Theory focuses on:",
+            "options": [
+              "Institutional behavior",
+              "Weather",
+              "Random noise",
+              "Text messages"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "Smart money often leaves clues in:",
+            "options": [
+              "Market structure",
+              "News timing",
+              "Laptop speed",
+              "Spread only"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "SMT helps identify:",
+            "options": [
+              "Better entries",
+              "Game scores",
+              "Movies",
+              "Social media posts"
+            ],
+            "correctIndex": 0
+          },
+          {
+            "question": "SMT is best used with:",
+            "options": [
+              "Price action",
+              "Random entries",
+              "Weekend only",
+              "TV shows"
             ],
             "correctIndex": 0
           }

@@ -66,8 +66,8 @@ export default function SnakeGame() {
     canvas.addEventListener("touchstart", onTouchStart, { passive: true });
     canvas.addEventListener("touchend", onTouchEnd, { passive: true });
     return () => {
-      canvas.removeEventListener("touchstart", onTouchStart as any);
-      canvas.removeEventListener("touchend", onTouchEnd as any);
+      canvas.removeEventListener("touchstart", onTouchStart as unknown as EventListener);
+      canvas.removeEventListener("touchend", onTouchEnd as unknown as EventListener);
     };
   }, [dir]);
 

@@ -9,19 +9,20 @@ type SettingsState = {
 }
 
 const STORAGE_KEY = 'settings'
+const storedSettings = (getItem(STORAGE_KEY) as Partial<Pick<SettingsState, 'theme' | 'unlocked'>>) ?? {}
 
 export const useSettingsStore = create<SettingsState>((set, get) => ({
-  theme: getItem(STORAGE_KEY)?.theme ?? 'dark',
-  unlocked: getItem(STORAGE_KEY)?.unlocked ?? false,
+  theme: storedSettings.theme ?? 'dark',
+  unlocked: storedSettings.unlocked ?? false,
   setTheme: (t) => {
-    set((s: any) => {
+    set((s) => {
       const next = { ...s, theme: t }
       setItem(STORAGE_KEY, next)
       return next
     })
   },
   setUnlocked: (v) => {
-    set((s: any) => {
+    set((s) => {
       const next = { ...s, unlocked: v }
       setItem(STORAGE_KEY, next)
       return next

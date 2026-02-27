@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-20",
+  "lesson_id": "adarsh-beginner-20",
+  "title": "SMT",
+  "video_url": "https://youtu.be/o8txnKo80p8?si=759fVU4MWUNPrcTv",
+  "videoUrl": "https://youtu.be/o8txnKo80p8?si=759fVU4MWUNPrcTv",
+  "description": "Smart Money Theory and institutional behavior clues.",
+  "quiz": [
+    {
+      "question": "SMT stands for:",
+      "options": ["Smart Money Theory", "Simple Market Trend", "Stock Market Trader", "Spread Movement Tactic"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Smart Money Theory focuses on:",
+      "options": ["Institutional behavior", "Weather", "Random noise", "Text messages"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Smart money often leaves clues in:",
+      "options": ["Market structure", "News timing", "Laptop speed", "Spread only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "SMT helps identify:",
+      "options": ["Better entries", "Game scores", "Movies", "Social media posts"],
+      "correctIndex": 0
+    },
+    {
+      "question": "SMT is best used with:",
+      "options": ["Price action", "Random entries", "Weekend only", "TV shows"],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -14,11 +14,11 @@ interface Props {
 export default function SwipeCard({ question, onAnswer }: Props) {
   const [rotation, setRotation] = useState(0);
 
-  const handleDrag = (_: any, info: PanInfo) => {
+  const handleDrag = (_: unknown, info: PanInfo) => {
     setRotation(info.offset.x / 20);
   };
 
-  const handleDragEnd = (_: any, info: PanInfo) => {
+  const handleDragEnd = (_: unknown, info: PanInfo) => {
     const threshold = 100;
     if (info.offset.x > threshold) {
       onAnswer(true);

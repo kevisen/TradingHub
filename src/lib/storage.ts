@@ -182,7 +182,7 @@ export function markInstructorValidated(instructor: Instructor): void {
 }
 
 // Stub functions for backward compatibility with legacy code
-export function getItem(key: string): any {
+export function getItem(key: string): unknown {
   try {
     if (typeof window === 'undefined') return null;
     const item = localStorage.getItem(key);
@@ -192,7 +192,7 @@ export function getItem(key: string): any {
   }
 }
 
-export function setItem(key: string, value: any): void {
+export function setItem(key: string, value: unknown): void {
   try {
     if (typeof window === 'undefined') return;
     localStorage.setItem(key, JSON.stringify(value));
@@ -201,7 +201,7 @@ export function setItem(key: string, value: any): void {
   }
 }
 
-export function importAll(data?: string): any {
+export function importAll(data?: string): unknown {
   return null;
 }
 

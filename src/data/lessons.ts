@@ -15,7 +15,7 @@ export type Lesson = {
   duration?: string;
   content?: string;
   mcqs?: MCQ[];
-  quiz?: any[];
+  quiz?: unknown[];
   isTest?: boolean;
 };
 
@@ -38,26 +38,33 @@ function deepClone<T>(obj: T): T {
 }
 
 // Helper to create a safe lesson object from any format
-function createSafeLesson(data: any, id?: string): Lesson | null {
+function createSafeLesson(data: unknown, id?: string): Lesson | null {
   if (!data) return null;
+  const source = data as Record<string, unknown>;
   
   try {
     return {
-      id: id || data.id || data.lesson_id || `lesson-${Date.now()}`,
-      title: data.title || data.lesson_title || "Untitled Lesson",
-      videoUrl: data.videoUrl || data.video_url || data.video || "",
-      description: data.description || "",
-      note: data.note || undefined,
-      duration: data.duration || undefined,
-      content: data.content || data.lesson_content || undefined,
-      mcqs: (data.mcqs || data.quiz || data.questions || [])
-        .map((q: any) => ({
-          question: q.question || q.title || "",
-          options: q.options || q.choices || q.answers || [],
-          correctIndex: q.correctIndex ?? q.answer ?? q.correct_index ?? 0
-        }))
-        .filter((q: any) => q.question && q.options.length > 0),
-      isTest: data.isTest ?? data.is_test ?? false
+      id: (id || source.id || source.lesson_id || `lesson-${Date.now()}`) as string,
+      title: (source.title || source.lesson_title || "Untitled Lesson") as string,
+      videoUrl: (source.videoUrl || source.video_url || source.video || "") as string,
+      description: (source.description || "") as string,
+      note: (source.note || undefined) as string | undefined,
+      duration: (source.duration || undefined) as string | undefined,
+      content: (source.content || source.lesson_content || undefined) as string | undefined,
+      mcqs: ((source.mcqs || source.quiz || source.questions || []) as unknown[])
+        .map((q: unknown) => {
+          const quizItem = q as Record<string, unknown>;
+          return {
+            question: (quizItem.question || quizItem.title || "") as string,
+            options: (quizItem.options || quizItem.choices || quizItem.answers || []) as string[],
+            correctIndex: (quizItem.correctIndex ?? quizItem.answer ?? quizItem.correct_index ?? 0) as number
+          };
+        })
+        .filter((q: unknown) => {
+          const quizItem = q as { question?: string; options?: string[] };
+          return Boolean(quizItem.question) && Array.isArray(quizItem.options) && quizItem.options.length > 0;
+        }),
+      isTest: (source.isTest ?? source.is_test ?? false) as boolean
     };
   } catch (error) {
     console.warn("Failed to create safe lesson:", error);
@@ -136,7 +143,7 @@ export async function initializeLessonsFromContent(): Promise<void> {
             const levelLessons = instrData?.[lvl as keyof typeof instrData];
             if (Array.isArray(levelLessons)) {
               lessons[instr][lvl] = levelLessons
-                .map((d: any) => createSafeLesson(d))
+                .map((d: unknown) => createSafeLesson(d))
                 .filter(Boolean) as Lesson[];
             }
           }

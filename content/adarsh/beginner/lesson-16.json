@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-16",
+  "lesson_id": "adarsh-beginner-16",
+  "title": "POI (PD ARRAY)",
+  "video_url": "https://youtu.be/eljIBZWFj4E?si=EFb4hvyXWzSEEnwF",
+  "videoUrl": "https://youtu.be/eljIBZWFj4E?si=EFb4hvyXWzSEEnwF",
+  "description": "Points of Interest and PD Array context in price action.",
+  "quiz": [
+    {
+      "question": "POI stands for:",
+      "options": ["Price of Interest", "Point of Ignorance", "Periodic Indicator", "Profit on Investment"],
+      "correctIndex": 0
+    },
+    {
+      "question": "PD Array likely refers to:",
+      "options": ["Price/Decision array", "Weather forecast", "Random table", "Indicator only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A Point of Interest helps traders:",
+      "options": ["Random entry", "Important price areas", "Broker fees", "News timing"],
+      "correctIndex": 1
+    },
+    {
+      "question": "POI is used in:",
+      "options": ["Charts for key zones", "Word documents", "Email", "Videos"],
+      "correctIndex": 0
+    },
+    {
+      "question": "PD Array cluster helps:",
+      "options": ["Orderflow context", "Movie ratings", "Game scores", "Weather"],
+      "correctIndex": 0
+    }
+  ]
+}

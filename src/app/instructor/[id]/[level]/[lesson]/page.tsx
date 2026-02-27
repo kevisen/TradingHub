@@ -342,7 +342,7 @@ export default function LessonPage() {
                   ) : (
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
                       <QuizComponent
-                        quiz={lesson.mcqs.slice(0, 5).map((q: any) => ({
+                        quiz={lesson.mcqs.slice(0, 5).map((q: { question: string; options: string[]; correctIndex?: number; answer?: number }) => ({
                           question: q.question,
                           options: q.options,
                           // support both `correctIndex` and `answer` naming

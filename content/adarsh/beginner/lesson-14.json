@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-14",
+  "lesson_id": "adarsh-beginner-14",
+  "title": "Market Structure Part 1",
+  "video_url": "https://youtu.be/G9z7elC9fas?si=igsFAW-wn5Rq9PM9",
+  "videoUrl": "https://youtu.be/G9z7elC9fas?si=igsFAW-wn5Rq9PM9",
+  "description": "Trend direction, support, and resistance fundamentals.",
+  "quiz": [
+    {
+      "question": "Market structure shows:",
+      "options": ["Weather", "Trend direction", "Random noise", "Sports score"],
+      "correctIndex": 1
+    },
+    {
+      "question": "An uptrend is identified by:",
+      "options": ["Lower highs", "Higher highs and higher lows", "Flat movement", "Volume only"],
+      "correctIndex": 1
+    },
+    {
+      "question": "A downtrend forms when price makes:",
+      "options": ["Higher highs", "Lower lows", "Equal highs", "News spikes"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Support is:",
+      "options": ["Price ceiling", "Price floor", "Random", "News event"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Resistance refers to:",
+      "options": ["Support", "Price ceiling", "Volume", "Indicator"],
+      "correctIndex": 1
+    }
+  ]
+}

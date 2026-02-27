@@ -70,6 +70,6 @@ export interface MarketQuestion {
 
 // Legacy types for backward compatibility
 export interface Curriculum {
-  [key: string]: any;
+  [key: string]: unknown;
 }
 

@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 interface Props {
   duration?: number; // seconds
   onExpire: () => void;
-  resetKey?: any; // when this value changes timer restarts
+  resetKey?: unknown; // when this value changes timer restarts
 }
 
 export default function TimerCircle({

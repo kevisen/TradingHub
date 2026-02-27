@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useState, useCallback } from 'react';
 import Lightbox from '@/components/Lightbox';
 import GsapPageEffects from '@/components/animations/GsapPageEffects';
+import CandleMindmapSection from '@/components/mindmap/CandleMindmapSection';
 import {
   PositionSizeGame,
   RiskRewardGame,
@@ -259,6 +260,8 @@ export default function Home() {
         </div>
       </section>
 
+      <CandleMindmapSection />
+
       {/* CHILL ZONE - MINI GAMES SECTION */}
       <section id="mini-games" data-gsap-reveal className="loop-grid-34 relative py-24 px-4">
         <div className="max-w-6xl mx-auto">
@@ -455,10 +458,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer data-gsap-reveal className="relative border-t border-white/10 bg-black/50 backdrop-blur mt-24">
+      <footer data-gsap-reveal className="fixed bottom-0 left-0 w-full border-t border-white/10 bg-black/50 backdrop-blur z-40">
         <div className="max-w-6xl mx-auto px-4 py-12 text-center text-gray-500 text-sm">
           <p>
-            © 2024 Trading Bootcamp. All rights reserved. | No registration. No database. Pure learning.
+            © 2026 TradingHub power by Under_Cover_agent
           </p>
         </div>
       </footer>

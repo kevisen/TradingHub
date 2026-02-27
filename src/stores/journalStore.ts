@@ -25,11 +25,12 @@ type JournalState = {
 }
 
 const STORAGE_KEY = 'journal'
+const storedJournal = (getItem(STORAGE_KEY) as { entries?: TradeEntry[] } | null) ?? null
 
 export const useJournalStore = create<JournalState>((set, get) => ({
-  entries: getItem(STORAGE_KEY)?.entries ?? [],
+  entries: storedJournal?.entries ?? [],
   addEntry: (e) => {
-    set((s: any) => {
+    set((s) => {
       const next = { ...s, entries: [e, ...s.entries] }
       setItem(STORAGE_KEY, next)
       return next
@@ -45,7 +46,7 @@ export const useJournalStore = create<JournalState>((set, get) => ({
     if (!entries || entries.length === 0) return ''
     const headers = ['id','createdAt','market','strategy','entry','stop','target','resultR','emotionalState','mistakes','notes']
     const rows = entries.map((e) => {
-      const safe = (v: any) => {
+      const safe = (v: unknown) => {
         if (v === undefined || v === null) return ''
         const s = typeof v === 'string' ? v : JSON.stringify(v)
         return '"' + s.replace(/"/g,'""') + '"'
@@ -59,8 +60,8 @@ export const useJournalStore = create<JournalState>((set, get) => ({
       const parsed = JSON.parse(jsonStr)
       const entries = parsed?.entries ?? parsed
       if (!Array.isArray(entries)) return false
-      set((s: any) => {
-        const next = { ...s, entries: [...entries, ...s.entries] }
+      set((s) => {
+        const next = { ...s, entries: [...(entries as TradeEntry[]), ...s.entries] }
         setItem(STORAGE_KEY, next)
         return next
       })
@@ -71,8 +72,8 @@ export const useJournalStore = create<JournalState>((set, get) => ({
     }
   },
   removeEntry: (id) => {
-    set((s: any) => {
-      const nextEntries = s.entries.filter((x: any) => x.id !== id)
+    set((s) => {
+      const nextEntries = s.entries.filter((x: TradeEntry) => x.id !== id)
       const next = { ...s, entries: nextEntries }
       setItem(STORAGE_KEY, next)
       return next

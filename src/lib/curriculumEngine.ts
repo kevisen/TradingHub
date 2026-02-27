@@ -14,7 +14,7 @@ export function loadCurriculum(): Curriculum {
 export async function tryLoadGeneratedCurriculum() {
   try {
     const mod = await import('../data/curriculum.generated.json')
-    const gen = (mod as any).default ?? mod
+    const gen = (mod as { default?: unknown }).default ?? mod
     if (gen && gen.instructors?.length) {
       _curriculum = gen as Curriculum
       console.log('Loaded generated curriculum')

@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-17",
+  "lesson_id": "adarsh-beginner-17",
+  "title": "Liquidity Pools Part 1",
+  "video_url": "https://youtu.be/wtZfrAB6698?si=aJk8paEJFlyi8YeX",
+  "videoUrl": "https://youtu.be/wtZfrAB6698?si=aJk8paEJFlyi8YeX",
+  "description": "Liquidity pools and how they shape market movement.",
+  "quiz": [
+    {
+      "question": "Liquidity pools are areas where:",
+      "options": ["Water gathers", "Market orders congregate", "Brokers sleep", "News events occur"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Large stop orders create:",
+      "options": ["Liquidity", "Only noise", "Flat charts", "Weather patterns"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Traders seek liquidity for:",
+      "options": ["Good entry/exit", "Movies", "Music", "Random numbers"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Liquidity pools often sit near:",
+      "options": ["Structural highs/lows", "Random candle", "Weekend only", "Broker page"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Understanding liquidity helps traders:",
+      "options": ["Find smarter entries", "Weather data", "Social media", "Cooking"],
+      "correctIndex": 0
+    }
+  ]
+}

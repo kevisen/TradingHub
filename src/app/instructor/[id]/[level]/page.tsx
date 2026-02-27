@@ -5,13 +5,13 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ChevronLeft } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Level } from '@/lib/types';
+import { Level, Lesson } from '@/lib/types';
 
 export default function LevelPage() {
   const params = useParams();
   const instructorId = params.id as string;
   const levelId = params.level as Level;
-  const [lessons, setLessons] = useState<any[]>([]);
+  const [lessons, setLessons] = useState<Lesson[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

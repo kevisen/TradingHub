@@ -1,0 +1,35 @@
+{
+  "id": "adarsh-beginner-19",
+  "lesson_id": "adarsh-beginner-19",
+  "title": "CRT Part 1",
+  "video_url": "https://youtu.be/UyK6QmO-vPY?si=TOJ2SJl5g-JTzwSS",
+  "videoUrl": "https://youtu.be/UyK6QmO-vPY?si=TOJ2SJl5g-JTzwSS",
+  "description": "CRT foundations and reactions at structural levels.",
+  "quiz": [
+    {
+      "question": "CRT stands for:",
+      "options": ["Chart Reaction Theory", "Commodity Real Time", "Currency Rates Table", "Chart Range Tactic"],
+      "correctIndex": 0
+    },
+    {
+      "question": "CRT helps analyze:",
+      "options": ["Market behaviour", "Movies", "Weather", "Chat apps"],
+      "correctIndex": 0
+    },
+    {
+      "question": "CRT uses:",
+      "options": ["Structural levels", "Random values", "Spread only", "News only"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A valid CRT reaction shows:",
+      "options": ["False breakout", "Candles reacting at key zone", "Random move", "Only news"],
+      "correctIndex": 1
+    },
+    {
+      "question": "CRT helps with:",
+      "options": ["Entry & exit rules", "Car driving", "Game scores", "Weather forecast"],
+      "correctIndex": 0
+    }
+  ]
+}
