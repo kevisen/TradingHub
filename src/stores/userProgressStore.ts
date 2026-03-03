@@ -7,9 +7,14 @@ type ProgressState = {
   quizScores: Record<string, number>
   weakTags: Record<string, number>
   lastAccessedLesson?: string
+  labXP: number
+  labCompletion: number
+  labSkillBadge: 'Novice' | 'Developing' | 'Proficient' | 'Expert'
   markCompleted: (lessonId: string) => void
   addTime: (lessonId: string, minutes: number) => void
   setQuizScore: (lessonId: string, score: number) => void
+  addLabXP: (amount: number) => void
+  setLabCompletion: (percent: number) => void
 }
 
 const STORAGE_KEY = 'userProgress'
@@ -21,6 +26,14 @@ export const useUserProgressStore = create<ProgressState>((set, get) => ({
   quizScores: storedProgress.quizScores ?? {},
   weakTags: storedProgress.weakTags ?? {},
   lastAccessedLesson: storedProgress.lastAccessedLesson,
+  labXP: typeof storedProgress.labXP === 'number' ? storedProgress.labXP : 0,
+  labCompletion: typeof storedProgress.labCompletion === 'number' ? storedProgress.labCompletion : 0,
+  labSkillBadge:
+    storedProgress.labSkillBadge === 'Expert' ||
+    storedProgress.labSkillBadge === 'Proficient' ||
+    storedProgress.labSkillBadge === 'Developing'
+      ? storedProgress.labSkillBadge
+      : 'Novice',
   markCompleted: (lessonId) => {
     set((s) => {
       const next = { ...s, completedLessons: Array.from(new Set([...s.completedLessons, lessonId])) }
@@ -43,5 +56,26 @@ export const useUserProgressStore = create<ProgressState>((set, get) => ({
       setItem(STORAGE_KEY, next)
       return next
     })
-  }
+  },
+  addLabXP: (amount) => {
+    set((s) => {
+      if (!amount) return s
+      const nextXP = Math.max(0, s.labXP + amount)
+      if (nextXP === s.labXP) return s
+      const nextBadge: ProgressState['labSkillBadge'] =
+        nextXP >= 600 ? 'Expert' : nextXP >= 350 ? 'Proficient' : nextXP >= 150 ? 'Developing' : 'Novice'
+      const next = { ...s, labXP: nextXP, labSkillBadge: nextBadge }
+      setItem(STORAGE_KEY, next)
+      return next
+    })
+  },
+  setLabCompletion: (percent) => {
+    set((s) => {
+      const nextCompletion = Math.min(100, Math.max(0, Math.round(percent)))
+      if (nextCompletion === s.labCompletion) return s
+      const next = { ...s, labCompletion: nextCompletion }
+      setItem(STORAGE_KEY, next)
+      return next
+    })
+  },
 }))
