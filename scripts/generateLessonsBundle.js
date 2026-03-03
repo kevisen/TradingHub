@@ -5,6 +5,12 @@ function deepClone(obj) {
   return JSON.parse(JSON.stringify(obj))
 }
 
+function getNumericLessonOrder(fileName) {
+  const match = fileName.match(/lesson-(\d+)\.json$/)
+  if (!match) return Number.MAX_SAFE_INTEGER
+  return Number(match[1])
+}
+
 function scanContent(root) {
   const out = {}
   if (!fs.existsSync(root)) return out
@@ -16,7 +22,15 @@ function scanContent(root) {
     const levels = fs.readdirSync(instrPath).filter((d) => fs.statSync(path.join(instrPath, d)).isDirectory())
     for (const level of levels) {
       const levelPath = path.join(instrPath, level)
-      const files = fs.readdirSync(levelPath).filter((f) => f.endsWith('.json')).sort()
+      const files = fs
+        .readdirSync(levelPath)
+        .filter((f) => f.endsWith('.json'))
+        .sort((a, b) => {
+          const aNum = getNumericLessonOrder(a)
+          const bNum = getNumericLessonOrder(b)
+          if (aNum !== bNum) return aNum - bNum
+          return a.localeCompare(b)
+        })
       for (const file of files) {
         try {
           const content = fs.readFileSync(path.join(levelPath, file), 'utf8')

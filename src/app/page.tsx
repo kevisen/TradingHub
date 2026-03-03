@@ -458,7 +458,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer data-gsap-reveal className="fixed bottom-0 left-0 w-full border-t border-white/10 bg-black/50 backdrop-blur z-40">
+      <footer data-gsap-reveal className="w-full border-t border-white/10 bg-black/50 backdrop-blur">
         <div className="max-w-6xl mx-auto px-4 py-12 text-center text-gray-500 text-sm">
           <p>
             © 2026 TradingHub power by Under_Cover_agent

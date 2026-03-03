@@ -4,6 +4,12 @@ import path from 'path';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'content');
 
+function parseLessonNumber(lessonId: string): number {
+  const match = lessonId.match(/lesson-(\d+)$/);
+  if (!match) return Number.MAX_SAFE_INTEGER;
+  return Number(match[1]);
+}
+
 /**
  * Loads a lesson JSON file from the content folder
  */
@@ -56,8 +62,12 @@ export async function getLessonsByLevel(
       if (lesson) lessons.push(lesson);
     }
 
-    // Sort by lesson ID (assuming they're numbered or ordered)
-    return lessons.sort((a, b) => a.id.localeCompare(b.id));
+    return lessons.sort((a, b) => {
+      const aNum = parseLessonNumber(a.id);
+      const bNum = parseLessonNumber(b.id);
+      if (aNum !== bNum) return aNum - bNum;
+      return a.id.localeCompare(b.id);
+    });
   } catch (error) {
     console.error(`Failed to load lessons for ${instructor}/${level}:`, error);
     return [];
